@@ -17,32 +17,32 @@ The plugin comes with a beautiful professional default template which you can fu
 
 Features:
 
-# Works with all WordPress themes   
-# Professional default template   
-# Responsive HTML5/CSS3 layout
-# Quick and easy setup
-# Custom look and feel without coding
-# Highly customizable   
-# Google Fonts integration
-# Social media support (Facebook, Twitter, Vimeo, YouTube, Instagram)   
-# Google Analytics integration   
-# Email notifications  
-# SEO and Meta options
+* Works with all WordPress themes   
+* Professional default template   
+* Responsive HTML5/CSS3 layout
+* Quick and easy setup
+* Custom look and feel without coding
+* Highly customizable   
+* Google Fonts integration
+* Social media support (Facebook, Twitter, Vimeo, YouTube, Instagram)   
+* Google Analytics integration   
+* Email notifications  
+* SEO and Meta options
 
 ...and more.
 
 Upgrade to Pro for more fantastic options:
 
-# Photo and video background
-# Photo and video embed
-# Privacy Policy modal window
-# Custom Thank You message 
-# Custom favicon 
-# Custom CSS support 
-# Emails stored in WordPress database
-# MailChimp integration
-# Thank you page conversion code integration
-# Access control
+* Photo and video background
+* Photo and video embed
+* Privacy Policy modal window
+* Custom Thank You message 
+* Custom favicon 
+* Custom CSS support 
+* Emails stored in WordPress database
+* MailChimp integration
+* Thank you page conversion code integration
+* Access control
 
 Get Pro: http://shop.chop-chop.org
 
