@@ -1,4 +1,4 @@
-=== Coming Soon by Chop-Chop.org ===
+=== Coming Soon CC ===
 Contributors: chopchoporg
 Tags: coming soon, wordpress coming soon, maintenance, maintenance mode, wordpress maintenance mode, under construction, landing page, wordpress landing page, launch page, launch, under construction, wordpress under construction, offline, offline mode, subscribe, wordpress subscribe, notify
 Requires at least: 3.5.1
