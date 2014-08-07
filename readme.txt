@@ -11,11 +11,15 @@ An elegant Coming Soon page in just a few clicks.
 
 == Description ==
 
-Coming Soon by Chop-Chop.org allows you to create an elegant coming soon page quickly and effortlessly.
+Coming Soon CC comes with a beautiful professional default template which you can fully customize to your needs. It's simple and flexible and works with any WordPress theme.
 
-The plugin comes with a beautiful professional default template which you can fully customize to your needs.
+![Default template](https://shop.chop-chop.org/wp-content/uploads/2014/08/default-show.jpg "Default template")
 
-Features:
+Coming Soon CC allows you to create an elegant coming soon or launch page quickly and effortlessly. Make your site neat and stylish while it's under construction – work on your webpage when your visitors see an alluring landing page. Collect your visitors' emails and let them know when your website is launched.
+
+A good coming soon page is profitable for both start-ups and bigger companies to test their value hypotheses. 
+
+**Features:**
 
 * Works with all WordPress themes   
 * Professional default template   
@@ -44,7 +48,7 @@ Upgrade to Pro for more fantastic options:
 * Thank you page conversion code integration
 * Access control
 
-Get Pro: http://shop.chop-chop.org
+[Get Coming Soon CC Pro with more beautiful designs](https://shop.chop-chop.org?wordpress.org)
 
 == Installation ==
 
