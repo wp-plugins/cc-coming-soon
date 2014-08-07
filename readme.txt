@@ -13,8 +13,6 @@ An elegant Coming Soon page in just a few clicks.
 
 Coming Soon CC comes with a beautiful professional default template which you can fully customize to your needs. It's simple and flexible and works with any WordPress theme.
 
-![Default template](https://shop.chop-chop.org/wp-content/uploads/2014/08/default-show.jpg "Default template")
-
 Coming Soon CC allows you to create an elegant coming soon or launch page quickly and effortlessly. Make your site neat and stylish while it's under construction – work on your webpage when your visitors see an alluring landing page. Collect your visitors' emails and let them know when your website is launched.
 
 A good coming soon page is profitable for both start-ups and bigger companies to test their value hypotheses. 
