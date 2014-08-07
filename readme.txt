@@ -77,9 +77,10 @@ Upgrade to Pro for more fantastic options:
 
 == Screenshots ==
 
-1. Available templates
-2. Admin panel
-3. The default template
+1. The default template
+2. Available templates
+3. Admin panel
+4. The default template
 
 == Changelog ==
 
