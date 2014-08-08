@@ -5,7 +5,7 @@
  * @package   CcComingSoon
  * @author    Chop-Chop.org <talk@chop-chop.org>
  * @license   GPL-2.0+
- * @link      http://example.com
+ * @link      https://shop.chop-chop.org
  * @copyright 2014 
  */
 
@@ -24,7 +24,7 @@ class CcComingSoon {
 	 *
 	 * @var     string
 	 */
-	const VERSION = '0.1.0';
+	const VERSION = '0.1.1';
 
 	/**
 	 * Unique identifier for your plugin.
@@ -282,6 +282,9 @@ class CcComingSoon {
 	 */
 	public function on_init() {
 
+		// preserve canonical urls
+		redirect_canonical();
+
 		// is preview
 		if(isset($_GET['cc-cs-preview']) && $_GET['cc-cs-preview'] === '1') {
 			$this->show_cs_page();
@@ -351,11 +354,13 @@ class CcComingSoon {
 	}
 
 	public function get_logo_type() {
-		return array_pop(explode('_', $this->get_option('content', 'logo_type')));
+		$e = explode('_', $this->get_option('content', 'logo_type'));
+		return array_pop($e);
 	}
 
 	public function get_background_type() {
-		return array_pop(explode('_', $this->get_option('background', 'type')));
+		$e = explode('_', $this->get_option('background', 'type'));
+		return array_pop($e);
 	}
 
 }

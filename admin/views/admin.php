@@ -8,7 +8,7 @@
  * @package   CcComingSoon
  * @author    Chop-Chop.org <talk@chop-chop.org>
  * @license   GPL-2.0+
- * @link      http://example.com
+ * @link      https://shop.chop-chop.org
  * @copyright 2014 
  */
 class CcComingSoonAdminOptions extends AdminPageFramework {
@@ -37,7 +37,7 @@ class CcComingSoonAdminOptions extends AdminPageFramework {
 
         $this->addSubMenuItems(
             array(
-                'title'         =>    'Coming Soon by Chop-Chop.org',    // page and menu title
+                'title'         =>    'Coming Soon CC',    // page and menu title
                 'page_slug'     =>    'cc_coming_soon'   // page slug
             )
         );

@@ -36,31 +36,31 @@
 </style>
 <div class="themes-php">
 	<div class="wrap">
-		<h2>Templates <span class="theme-count">1 (Available in Pro: 4)</span></h2>
+		<h2>Templates <span class="theme-count">1 (Available in Pro: 5)</span></h2>
 		<div class="theme-browser rendered">
 			<div class="themes">
 
 				<div class="theme active" tabindex="0">
 					<div class="theme-screenshot">
-						<img src="<?php echo CC_CS_PLUGIN_URL . 'admin/assets/screenshots/default.png'; ?>" alt="" />
+						<img src="<?php echo CC_CS_PLUGIN_URL . 'admin/assets/screenshots/default.jpg'; ?>" alt="" />
 					</div>
 					<h3 class="theme-name" id="default-name"><span>Active:</span> Default</h3>
 				</div>
 	
 				<div class="theme" tabindex="0">
 					<div class="theme-screenshot">
-						<img src="<?php echo CC_CS_PLUGIN_URL . 'admin/assets/screenshots/stylish.png'; ?>" alt="" />
+						<img src="<?php echo CC_CS_PLUGIN_URL . 'admin/assets/screenshots/chic.jpg'; ?>" alt="" />
 					</div>
 					<a href="http://ch-ch.org/cspro" class="more-details">Available in Pro</a>
-					<h3 class="theme-name">Stylish</h3>
+					<h3 class="theme-name">Chic</h3>
 					<div class="theme-actions">
-						<a class="button button-primary" href="https://shop.chop-chop.org/demo/cc-coming-soon-pro/?template=stylish" target="_blank">Live Preview</a>
+						<a class="button button-primary" href="https://shop.chop-chop.org/demo/cc-coming-soon-pro/?template=chic" target="_blank">Live Preview</a>
 					</div>
 				</div>
 
 				<div class="theme" tabindex="0">
 					<div class="theme-screenshot">
-						<img src="<?php echo CC_CS_PLUGIN_URL . 'admin/assets/screenshots/mobility.png'; ?>" alt="" />
+						<img src="<?php echo CC_CS_PLUGIN_URL . 'admin/assets/screenshots/mobility.jpg'; ?>" alt="" />
 					</div>
 					<a href="http://ch-ch.org/cspro" class="more-details">Available in Pro</a>
 					<h3 class="theme-name">Mobility</h3>
@@ -71,12 +71,34 @@
 
 				<div class="theme" tabindex="0">
 					<div class="theme-screenshot">
-						<img src="<?php echo CC_CS_PLUGIN_URL . 'admin/assets/screenshots/calm.png'; ?>" alt="" />
+						<img src="<?php echo CC_CS_PLUGIN_URL . 'admin/assets/screenshots/calm.jpg'; ?>" alt="" />
 					</div>
 					<a href="http://ch-ch.org/cspro" class="more-details">Available in Pro</a>
 					<h3 class="theme-name">Calm</h3>
 					<div class="theme-actions">
 						<a class="button button-primary" href="https://shop.chop-chop.org/demo/cc-coming-soon-pro/?template=calm" target="_blank">Live Preview</a>
+					</div>
+				</div>
+
+				<div class="theme" tabindex="0">
+					<div class="theme-screenshot">
+						<img src="<?php echo CC_CS_PLUGIN_URL . 'admin/assets/screenshots/fitness.jpg'; ?>" alt="" />
+					</div>
+					<a href="http://ch-ch.org/cspro" class="more-details">Available in Pro</a>
+					<h3 class="theme-name">Fitness</h3>
+					<div class="theme-actions">
+						<a class="button button-primary" href="https://shop.chop-chop.org/demo/cc-coming-soon-pro/?template=fitness" target="_blank">Live Preview</a>
+					</div>
+				</div>
+
+				<div class="theme" tabindex="0">
+					<div class="theme-screenshot">
+						<img src="<?php echo CC_CS_PLUGIN_URL . 'admin/assets/screenshots/stylish.jpg'; ?>" alt="" />
+					</div>
+					<a href="http://ch-ch.org/cspro" class="more-details">Available in Pro</a>
+					<h3 class="theme-name">Stylish</h3>
+					<div class="theme-actions">
+						<a class="button button-primary" href="https://shop.chop-chop.org/demo/cc-coming-soon-pro/?template=stylish" target="_blank">Live Preview</a>
 					</div>
 				</div>
 

@@ -6,7 +6,7 @@
  * @package   CcComingSoon
  * @author    Chop-Chop.org <talk@chop-chop.org>
  * @license   GPL-2.0+
- * @link      http://example.com
+ * @link      https://shop.chop-chop.org
  * @copyright 2014 
  */
 $base_url = plugin_dir_url( __FILE__ );
@@ -37,7 +37,7 @@ $options = $this->get_options();
 
         <?php $fonts_code = implode('%7c', $fonts); ?>
 
-        <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=<?php echo $fonts_code; ?>">
+        <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=<?php echo $fonts_code; ?>">
         
         <style>
         body {
