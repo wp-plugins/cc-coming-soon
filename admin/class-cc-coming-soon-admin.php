@@ -5,7 +5,7 @@
  * @package   CcComingSoonAdmin
  * @author    Chop-Chop.org <talk@chop-chop.org>
  * @license   GPL-2.0+
- * @link      http://example.com
+ * @link      https://shop.chop-chop.org
  * @copyright 2014 
  */
 

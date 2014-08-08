@@ -1,50 +1,49 @@
-=== Coming Soon by Chop-Chop.org ===
+=== Coming Soon CC ===
 Contributors: chopchoporg
-Tags: coming soon, wordpress coming soon, maintenance, maintenance mode, wordpress maintenance mode, under construction, landing page, wordpress landing page, launch page, launch, under construction, wordpress under construction, offline, offline mode, subscribe, wordpress subscribe, notify
+Tags: coming soon, wordpress coming soon, coming soon page, simple coming soon, coming soon template, coming soon theme, coming soon plugin, easy coming soon
 Requires at least: 3.5.1
 Tested up to: 3.9.1
-Stable tag: 0.1.0
+Stable tag: 0.1.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-An elegant Coming Soon page in just a few clicks.
+Coming Soon page with professional templates.
 
 == Description ==
 
-Coming Soon by Chop-Chop.org allows you to create an elegant coming soon page quickly and effortlessly.
+Coming Soon CC comes with a beautiful professional default template which you can fully customize to your needs. It's simple and flexible and works with any WordPress theme.
 
-The plugin comes with a beautiful professional default template which you can fully customize to your needs.
+Coming Soon CC allows you to create an elegant coming soon or launch page quickly and effortlessly. Make your site neat and stylish while it's under construction – work on your webpage when your visitors see an alluring landing page. Collect your visitors' emails and let them know when your website is launched.
 
-Features:
+A good coming soon page is profitable for both start-ups and bigger companies to test their value hypotheses. 
 
-# Works with all WordPress themes   
-# Professional default template   
-# Responsive HTML5/CSS3 layout
-# Quick and easy setup
-# Custom look and feel without coding
-# Highly customizable   
-# Google Fonts integration
-# Social media support (Facebook, Twitter, Vimeo, YouTube, Instagram)   
-# Google Analytics integration   
-# Email notifications  
-# SEO and Meta options
+**Features:**
+
+* Works with all WordPress themes   
+* Professional default template   
+* Responsive HTML5/CSS3 layout
+* Quick and easy setup
+* Custom look and feel without coding
+* Highly customizable   
+* Google Fonts integration
+* Social media support (Facebook, Twitter, Vimeo, YouTube, Instagram)   
+* Google Analytics integration   
+* Email notifications  
+* SEO and Meta options
 
 ...and more.
 
-Upgrade to Pro for more fantastic options:
+**Upgrade to Pro for more fantastic options:**
 
-# Photo and video background
-# Photo and video embed
-# Privacy Policy modal window
-# Custom Thank You message 
-# Custom favicon 
-# Custom CSS support 
-# Emails stored in WordPress database
-# MailChimp integration
-# Thank you page conversion code integration
-# Access control
+* [Stylish Template](https://shop.chop-chop.org/demo/cc-coming-soon-pro/?template=stylish) - perfect for fashion lovers
+* [Mobility Template](https://shop.chop-chop.org/demo/cc-coming-soon-pro/?template=mobility) - show your custom app preview on the phone screen!
+* [Calm Template](https://shop.chop-chop.org/demo/cc-coming-soon-pro/?template=calm) - a gentle waiting mood
+* [Chic Template](https://shop.chop-chop.org/demo/cc-coming-soon-pro/?template=chic) - elegant and alluring
+* [Fitness Template](https://shop.chop-chop.org/demo/cc-coming-soon-pro/?template=fitness) - pump up your fitness startup
+* MailChimp integration
+* Thank you page conversion code integration
 
-Get Pro: http://shop.chop-chop.org
+[Get Coming Soon CC Pro with more beautiful designs](https://shop.chop-chop.org?wordpress.org)
 
 == Installation ==
 
@@ -75,11 +74,21 @@ Get Pro: http://shop.chop-chop.org
 
 == Screenshots ==
 
-1. Available templates
-2. Admin panel
-3. The default template
+1. Default template (Free)
+2. Default template (Free)
+3. Chic template (Pro)
+4. Calm template (Pro)
+5. Stylish template (Pro)
+6. Mobility template (Pro)
+7. Fitness template (Pro)
+8. Available templates (Pro)
+9. Admin panel
 
 == Changelog ==
+
+= 0.1.1 =
+Preserve canonical URL
+Minor fixes
 
 = 0.1.0 =
 First release

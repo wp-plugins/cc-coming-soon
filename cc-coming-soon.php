@@ -4,14 +4,14 @@
  * @package   CcComingSoon
  * @author    Chop-Chop.org <talk@chop-chop.org>
  * @license   GPL-2.0+
- * @link      http://example.com
+ * @link      https://shop.chop-chop.org
  * @copyright 2014 
  *
  * @wordpress-plugin
- * Plugin Name:       Coming Soon by Chop-Chop.org
+ * Plugin Name:       Coming Soon CC
  * Plugin URI:        https://shop.chop-chop.org
  * Description:       An elegant Coming Soon page in just a few clicks.
- * Version:           0.1.0
+ * Version:           0.1.1
  * Author:            Chop-Chop.org
  * Author URI:        http://chop-chop.org
  * Text Domain:       cc-coming-soon-locale
