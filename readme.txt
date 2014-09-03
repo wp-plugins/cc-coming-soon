@@ -22,7 +22,7 @@ A good coming soon page is profitable for both start-ups and bigger companies to
 **Features:**
 
 * [Beautiful design](https://shop.chop-chop.org/demo/cc-coming-soon-pro/?template=default)
-* Works with all WordPress themes
+* Works with all WordPress themes   
 * Responsive HTML5/CSS3 layout
 * Quick and easy setup
 * Custom look and feel without coding
@@ -88,11 +88,11 @@ A good coming soon page is profitable for both start-ups and bigger companies to
 8. Available templates (Pro)
 9. Admin panel
 
-== Changelog ==
+== Changelog == 
 
-= 0.1.1 =
-Preserve canonical URL
+= 0.1.1 = 
+Preserve canonical URL 
 Minor fixes
 
-= 0.1.0 =
+= 0.1.0 = 
 First release
