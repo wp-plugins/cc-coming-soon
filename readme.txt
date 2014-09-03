@@ -13,14 +13,16 @@ Coming Soon page with professional templates.
 
 Coming Soon CC comes with a beautiful professional default template which you can fully customize to your needs. It's simple and flexible and works with any WordPress theme.
 
+Live preview: [Default Template](https://shop.chop-chop.org/demo/cc-coming-soon-pro/?template=default)
+
 Coming Soon CC allows you to create an elegant coming soon or launch page quickly and effortlessly. Make your site neat and stylish while it's under construction – work on your webpage when your visitors see an alluring landing page. Collect your visitors' emails and let them know when your website is launched.
 
 A good coming soon page is profitable for both start-ups and bigger companies to test their value hypotheses. 
 
 **Features:**
 
+* [Beautiful design](https://shop.chop-chop.org/demo/cc-coming-soon-pro/?template=default)
 * Works with all WordPress themes   
-* Professional default template   
 * Responsive HTML5/CSS3 layout
 * Quick and easy setup
 * Custom look and feel without coding
@@ -35,6 +37,8 @@ A good coming soon page is profitable for both start-ups and bigger companies to
 
 **Upgrade to Pro for more fantastic options:**
 
+* Six professional [designs](https://shop.chop-chop.org/?utm_source=wordpress-org&utm_medium=link&am…)
+* [Default Template](https://shop.chop-chop.org/demo/cc-coming-soon-pro/?template=default) - clean and versatile typographic template
 * [Stylish Template](https://shop.chop-chop.org/demo/cc-coming-soon-pro/?template=stylish) - perfect for fashion lovers
 * [Mobility Template](https://shop.chop-chop.org/demo/cc-coming-soon-pro/?template=mobility) - show your custom app preview on the phone screen!
 * [Calm Template](https://shop.chop-chop.org/demo/cc-coming-soon-pro/?template=calm) - a gentle waiting mood
@@ -43,7 +47,7 @@ A good coming soon page is profitable for both start-ups and bigger companies to
 * MailChimp integration
 * Thank you page conversion code integration
 
-[Get Coming Soon CC Pro with more beautiful designs](https://shop.chop-chop.org?wordpress.org)
+[Get Coming Soon CC Pro with more beautiful designs](https://shop.chop-chop.org/?utm_source=wordpress-org&utm_medium=link&am…)
 
 == Installation ==
 
@@ -84,11 +88,11 @@ A good coming soon page is profitable for both start-ups and bigger companies to
 8. Available templates (Pro)
 9. Admin panel
 
-== Changelog ==
+== Changelog == 
 
-= 0.1.1 =
-Preserve canonical URL
+= 0.1.1 = 
+Preserve canonical URL 
 Minor fixes
 
-= 0.1.0 =
+= 0.1.0 = 
 First release
