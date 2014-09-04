@@ -2,7 +2,7 @@
 Contributors: chopchoporg
 Tags: coming soon, wordpress coming soon, coming soon page, simple coming soon, coming soon template, coming soon theme, coming soon plugin, easy coming soon
 Requires at least: 3.5.1
-Tested up to: 3.9.1
+Tested up to: 3.9.2
 Stable tag: 0.1.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -13,7 +13,7 @@ Coming Soon page with professional templates.
 
 Coming Soon CC comes with a beautiful professional default template which you can fully customize to your needs. It's simple and flexible and works with any WordPress theme.
 
-Live preview: [Default Template](https://shop.chop-chop.org/demo/cc-coming-soon-pro/?template=default)
+Live preview: [Default Coming Soon Page](https://shop.chop-chop.org/demo/cc-coming-soon-pro/?template=default)
 
 Coming Soon CC allows you to create an elegant coming soon or launch page quickly and effortlessly. Make your site neat and stylish while it's under construction – work on your webpage when your visitors see an alluring landing page. Collect your visitors' emails and let them know when your website is launched.
 
@@ -35,17 +35,17 @@ A good coming soon page is profitable for both start-ups and bigger companies to
 
 ...and more.
 
-**Upgrade to Pro for more fantastic options:**
+**Upgrade to Coming Soon CC Pro for more fantastic options:**
 
-* Six professional [designs](https://shop.chop-chop.org/?utm_source=wordpress-org&utm_medium=link&am…)
-* [Default Template](https://shop.chop-chop.org/demo/cc-coming-soon-pro/?template=default) - clean and versatile typographic template
-* [Stylish Template](https://shop.chop-chop.org/demo/cc-coming-soon-pro/?template=stylish) - perfect for fashion lovers
-* [Mobility Template](https://shop.chop-chop.org/demo/cc-coming-soon-pro/?template=mobility) - show your custom app preview on the phone screen!
-* [Calm Template](https://shop.chop-chop.org/demo/cc-coming-soon-pro/?template=calm) - a gentle waiting mood
-* [Chic Template](https://shop.chop-chop.org/demo/cc-coming-soon-pro/?template=chic) - elegant and alluring
-* [Fitness Template](https://shop.chop-chop.org/demo/cc-coming-soon-pro/?template=fitness) - pump up your fitness startup
+* Six professional [landing page designs](https://shop.chop-chop.org/?utm_source=wordpress-org&utm_medium=link&am…) - spice up your Coming Soon page
+* [Default Coming Soon Page](https://shop.chop-chop.org/demo/cc-coming-soon-pro/?template=default) - clean and versatile typographic template
+* [Stylish Coming Soon Page](https://shop.chop-chop.org/demo/cc-coming-soon-pro/?template=stylish) - perfect for fashion lovers
+* [Mobility Coming Soon Page](https://shop.chop-chop.org/demo/cc-coming-soon-pro/?template=mobility) - show your custom app preview on the phone screen!
+* [Calm Coming Soon Page](https://shop.chop-chop.org/demo/cc-coming-soon-pro/?template=calm) - a gentle waiting mood
+* [Chic Coming Soon Page](https://shop.chop-chop.org/demo/cc-coming-soon-pro/?template=chic) - elegant and alluring
+* [Fitness Coming Soon Page](https://shop.chop-chop.org/demo/cc-coming-soon-pro/?template=fitness) - pump up your fitness startup
 * MailChimp integration
-* Thank you page conversion code integration
+* Google AdWords conversion code integration
 
 [Get Coming Soon CC Pro with more beautiful designs](https://shop.chop-chop.org/?utm_source=wordpress-org&utm_medium=link&am…)
 
