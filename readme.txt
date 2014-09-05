@@ -37,7 +37,7 @@ A good coming soon page is profitable for both start-ups and bigger companies to
 
 **Upgrade to Coming Soon CC Pro for more fantastic options:**
 
-* Six professional [landing page designs](https://shop.chop-chop.org/?utm_source=wordpress-org&utm_medium=link&am…) - spice up your Coming Soon page
+* Six professional [landing page designs](https://shop.chop-chop.org/?utm_source=free-plugin&utm_medium=link&utm_campaign=available-in-pro) - spice up your Coming Soon page
 * [Default Coming Soon Page](https://shop.chop-chop.org/demo/cc-coming-soon-pro/?template=default) - clean and versatile typographic template
 * [Stylish Coming Soon Page](https://shop.chop-chop.org/demo/cc-coming-soon-pro/?template=stylish) - perfect for fashion lovers
 * [Mobility Coming Soon Page](https://shop.chop-chop.org/demo/cc-coming-soon-pro/?template=mobility) - show your custom app preview on the phone screen!
@@ -47,7 +47,7 @@ A good coming soon page is profitable for both start-ups and bigger companies to
 * MailChimp integration
 * Google AdWords conversion code integration
 
-[Get Coming Soon CC Pro with more beautiful designs](https://shop.chop-chop.org/?utm_source=wordpress-org&utm_medium=link&am…)
+[Get Coming Soon CC Pro with more beautiful designs](https://shop.chop-chop.org/?utm_source=free-plugin&utm_medium=link&utm_campaign=available-in-pro)
 
 == Installation ==
 
@@ -78,14 +78,14 @@ A good coming soon page is profitable for both start-ups and bigger companies to
 
 == Screenshots ==
 
-1. Default template (Free)
-2. Default template (Free)
-3. Chic template (Pro)
-4. Calm template (Pro)
-5. Stylish template (Pro)
-6. Mobility template (Pro)
-7. Fitness template (Pro)
-8. Available templates (Pro)
+1. [Default template (Free)](https://shop.chop-chop.org/demo/cc-coming-soon-pro/?template=default)
+2. [Default template (Free)](https://shop.chop-chop.org/demo/cc-coming-soon-pro/?template=default)
+3. [Chic template (Pro)](https://shop.chop-chop.org/demo/cc-coming-soon-pro/?template=chic)
+4. [Calm template (Pro)](https://shop.chop-chop.org/demo/cc-coming-soon-pro/?template=calm)
+5. [Stylish template (Pro)](https://shop.chop-chop.org/demo/cc-coming-soon-pro/?template=stylish)
+6. [Mobility template (Pro)](https://shop.chop-chop.org/demo/cc-coming-soon-pro/?template=mobility)
+7. [Fitness template (Pro)](https://shop.chop-chop.org/demo/cc-coming-soon-pro/?template=fitness)
+8. [Available templates (Pro)](https://shop.chop-chop.org/?utm_source=free-plugin&utm_medium=link&utm_campaign=available-in-pro)
 9. Admin panel
 
 == Changelog == 
