@@ -83,7 +83,7 @@ class CcComingSoonAdminOptions extends AdminPageFramework {
             array(
                 'section_id'    =>  'status',
                 'tab_slug'      =>  'settings',
-                'title'         =>  __('Status', $this->plugin_slug),
+                'title'         =>  __('Plugin Status', $this->plugin_slug),
             ),
             array(
                 'section_id'    =>  'social_services',
@@ -136,13 +136,13 @@ class CcComingSoonAdminOptions extends AdminPageFramework {
             array(
                 'field_id'      => 'enabled',
                 'type'          => 'radio',
-                'title'         => __('Enabled', $this->plugin_slug),
+                'title'         => __('Status', $this->plugin_slug),
                 'default'       =>  'yes',
                 'label'         =>  array(
-                    'yes'   => 'Yes',
-                    'no'    => 'No'       
+                    'yes'   => __('Activated', $this->plugin_slug),
+                    'no'    => __('Deactivated', $this->plugin_slug)
                 ),
-                'description'   => __('Enable or disable the plugin.', $this->plugin_slug)
+                'description'   => __('Coming Soon page is visible only for the unlogged users.', $this->plugin_slug)
             )
         );
 
