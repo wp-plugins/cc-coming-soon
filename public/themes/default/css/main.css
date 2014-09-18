@@ -164,6 +164,11 @@ button {
     font-weight: normal;
 }
 
+.header-container header h1 img {
+    max-width: 100%;
+    max-height: 180px;
+}
+
 /* ==============
     MOBILE: Main
    ============== */
