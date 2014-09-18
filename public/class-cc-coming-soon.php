@@ -297,17 +297,27 @@ class CcComingSoon {
 
 		// Not on front-end
 		$paths = array(
-			'wp-admin/',
-			'wp-login.php',
+			'wp-admin',
+			'wp-login',
+			'login',
+			'wp-cron',
+			'feed',
 			'async-upload.php',
 			'upgrade.php',
 			'/plugins/',
 			'/xmlrpc.php'
 		);
 		foreach ($paths as $path) {
-			if(strstr($_SERVER['PHP_SELF'], $path))
+			if(
+				   (!empty($_SERVER['PHP_SELF']) && strstr($_SERVER['PHP_SELF'], $path))
+				|| (!empty($_SERVER['REQUEST_URI']) && strstr($_SERVER['REQUEST_URI'], $path))
+			)
 				return false;
 		}
+
+		// custom login
+		if (in_array($GLOBALS['pagenow'], array('wp-login.php')))
+			return false;
 
 		// is admin
 		if(is_super_admin())

@@ -270,13 +270,19 @@ class CcComingSoonAdminOptions extends AdminPageFramework {
                 )
             ),
             array(
-                'field_id'  =>  'footer_note',
-                'type'      =>  'textarea',
-                'title'     =>  __('Footer note', $this->plugin_slug),
-                'rich'  =>  array( 
+                'field_id'      =>  'footer_note',
+                'type'          =>  'textarea',
+                'title'         =>  __('Footer Note', $this->plugin_slug),
+                'rich'          =>  array( 
                     'media_buttons' =>  false,
-                    'teeny' => true
+                    'teeny'         => true
                 )
+            ),
+            array(
+                'field_id'      =>  'favicon',
+                'type'          =>  'image',
+                'title'         =>  __('Favicon', $this->plugin_slug),
+                'description'   =>  __('The favicon will be displayed in a browser tab.', $this->plugin_slug)
             )
         );
 

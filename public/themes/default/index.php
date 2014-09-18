@@ -23,6 +23,10 @@ $options = $this->get_options();
         
         <link rel="stylesheet" href="<?php echo $base_url; ?>css/normalize.min.css">
         <link rel="stylesheet" href="<?php echo $base_url; ?>css/main.css">
+        
+        <?php if($favicon = $this->get_option('content', 'favicon')): ?>
+        <link rel="shortcut icon" href="<?php echo $favicon; ?>" />
+        <?php endif; ?>
 
         <?php $fonts = array(
             'Open+Sans',
