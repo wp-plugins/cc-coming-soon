@@ -26,7 +26,6 @@ A good coming soon page is profitable for both start-ups and bigger companies to
 * Responsive HTML5/CSS3 layout
 * Quick and easy setup
 * Custom look and feel without coding
-* Custom favicon
 * Highly customizable   
 * Google Fonts integration
 * Social media support (Facebook, Twitter, Vimeo, YouTube, Instagram)   
