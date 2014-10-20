@@ -15,6 +15,49 @@
  * @package CcComingSoon
  * @author  Chop-Chop.org <talk@chop-chop.org>
  */
+ 
+if (!function_exists('array_replace_recursive'))
+{
+  function array_replace_recursive($array, $array1)
+  {
+    function recurse($array, $array1)
+    {
+      foreach ($array1 as $key => $value)
+      {
+        // create new key in $array, if it is empty or not an array
+        if (!isset($array[$key]) || (isset($array[$key]) && !is_array($array[$key])))
+        {
+          $array[$key] = array();
+        }
+
+        // overwrite the value in the base array
+        if (is_array($value))
+        {
+          $value = recurse($array[$key], $value);
+        }
+        $array[$key] = $value;
+      }
+      return $array;
+    }
+
+    // handle the arguments, merge one by one
+    $args = func_get_args();
+    $array = $args[0];
+    if (!is_array($array))
+    {
+      return $array;
+    }
+    for ($i = 1; $i < count($args); $i++)
+    {
+      if (is_array($args[$i]))
+      {
+        $array = recurse($array, $args[$i]);
+      }
+    }
+    return $array;
+  }
+}
+
 class CcComingSoon {
 
 	/**
@@ -243,12 +286,18 @@ class CcComingSoon {
 	 * @since    0.1.0
 	 */
 	private static function single_activate() {
+		
+		$defaults = (include(dirname( __FILE__ ) . '/../config/defaults.php'));
+
 		if(!get_option('CcComingSoonAdminOptions')) {
-			$options = (include(dirname( __FILE__ ) . '/../includes/defaults.php'));
-			if(count($options)) {
-				add_option('CcComingSoonAdminOptions', $options);
-			}
-		}
+			add_option('CcComingSoonAdminOptions', $defaults);
+		} else {
+
+			$options = get_option('CcComingSoonAdminOptions');
+ 
+			// Save merged options
+			update_option('CcComingSoonAdminOptions', array_replace_recursive($defaults, $options));
+		} 
 	}
 
 	/**
@@ -371,6 +420,64 @@ class CcComingSoon {
 	public function get_background_type() {
 		$e = explode('_', $this->get_option('background', 'type'));
 		return array_pop($e);
+	}
+	
+	/**
+	 * reset_options_to_default
+	 * @return boolean
+	 */
+	public function reset_options_to_default($sections,$tab) {
+			$options = (include(dirname( __FILE__ ) . '/../config/defaults.php'));
+			$current_settings = get_option('CcComingSoonAdminOptions');
+			
+			$to_reset = array(); 
+			
+			foreach($sections as $section)
+			{
+				if(isset($options[$section]))
+				{
+				$to_reset[$section] = $options[$section];
+				}
+			} 
+			
+			if($tab != 'design')
+			{	
+				$settings = array_replace_recursive($current_settings, $to_reset);
+			}
+			elseif($tab == 'design')
+			{
+				$template =  'default'; 
+				$current_settings = array_merge($current_settings, $to_reset); 
+				$settings = $this->merge_template_settings($current_settings, $template);
+			}
+			if(count($settings)) {
+				return update_option('CcComingSoonAdminOptions', $settings);
+			}  
+	}
+	
+	public function merge_template_settings($base = array(), $template) {
+
+		$file = CC_CS_PLUGIN_DIR . 'public/themes/' . $template . '/defaults.json';
+		$settings = file_exists($file) ? json_decode(file_get_contents($file), true) : null;
+
+		if($settings) {
+			$settings['options'] = isset($settings['options']) ? $settings['options'] : array();
+
+			if(isset($settings['files']) && count($settings['files'])) {
+				foreach($settings['files'] as $sKey => $section) {
+					foreach($section as $oKey => $option) {
+						$settings['files'][$sKey][$oKey] = plugins_url($option, $file);
+					}
+				}
+
+				$settings['options'] = array_replace_recursive($settings['options'], $settings['files']);
+			}
+
+			return array_replace_recursive($base, $settings['options']);
+		} else {
+			return array();
+		}
+		
 	}
 
 }

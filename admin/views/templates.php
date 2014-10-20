@@ -36,7 +36,7 @@
 </style>
 <div class="themes-php">
 	<div class="wrap">
-		<h2>Templates <span class="theme-count">1 (Available in Pro: 5)</span></h2>
+		<h2>Templates <span class="theme-count title-count">1 (Available in Pro: 6)</span></h2>
 		<div class="theme-browser rendered">
 			<div class="themes">
 

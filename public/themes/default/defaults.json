@@ -1,0 +1,24 @@
+{
+	"options": {
+		"background": {
+			"type": "undefined",
+			"color": "#ffffff"
+		},
+		"text_logo": {
+			"color": "#000000",
+			"font": "Pacifico"
+		},
+		"font": {
+			"text_color": "#989898",
+			"header_color": "#000000",
+			"link_color": "#484848"
+		},
+		"content_fonts": {
+			"header_font":"Oswald",
+			"content_font":"Open+Sans",
+			"input_font":"Open+Sans",
+			"button_font":"Oswald",
+			"message_font":"Oswald"
+		}
+	}
+}
