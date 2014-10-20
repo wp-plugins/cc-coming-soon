@@ -130,9 +130,9 @@ textarea {
 }
 
 body {
+    min-height: 100%;
     font: 16px/1.8 Open Sans, Arial, sans-serif;
     background-color: #fff;
-    min-height: 100%;
 }
 
 .wrapper {
@@ -355,7 +355,7 @@ button {
     }
 
     #newsletter p:before {
-        top: 13px;
+        top: 15px;
     }
 
     #newsletter p:first-child {

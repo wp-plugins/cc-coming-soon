@@ -32,7 +32,7 @@ class CcComingSoonAdminOptions extends AdminPageFramework {
 
         $plugin = CcComingSoon::get_instance();
         $this->plugin_slug = $plugin->get_plugin_slug();
-
+		$this->plugin = CcComingSoon::get_instance();
         $this->setRootMenuPage( 'Settings' );
 
         $this->addSubMenuItems(
@@ -111,6 +111,12 @@ class CcComingSoonAdminOptions extends AdminPageFramework {
                 'tab_slug'      =>  'content',
                 'title'         =>  __('Coming Soon Page Content', $this->plugin_slug)
             ),
+			array(
+                'section_id'    =>  'subscribe_strings',
+                'tab_slug'      =>  'content',
+                'title'         =>  __('Translations', $this->plugin_slug),
+                'order'         =>  20
+            ),
             array(
                 'section_id'    =>  'background',
                 'tab_slug'      =>  'design',
@@ -125,6 +131,12 @@ class CcComingSoonAdminOptions extends AdminPageFramework {
                 'section_id'    =>  'font',
                 'tab_slug'      =>  'design',
                 'title'         =>  __('Content', $this->plugin_slug)
+            ),
+			array(
+                'section_id'    =>  'content_fonts',
+                'tab_slug'      =>  'design',
+                'title'         =>  __('Content Fonts', $this->plugin_slug),
+                'order'         =>  40
             )
         );
 
@@ -142,7 +154,7 @@ class CcComingSoonAdminOptions extends AdminPageFramework {
                     'yes'   => __('Activated', $this->plugin_slug),
                     'no'    => __('Deactivated', $this->plugin_slug)
                 ),
-                'description'   => __('Coming Soon page is visible only for the unlogged users.', $this->plugin_slug)
+                'description'   => __('By default Coming Soon page is visible only to the unlogged users.', $this->plugin_slug)
             )
         );
 
@@ -203,7 +215,7 @@ class CcComingSoonAdminOptions extends AdminPageFramework {
                     'yes'   => 'Yes',
                     'no'    => 'No'       
                 ),
-                'description'   => __('Enable or disable newsletter subscribe form on front-end.', $this->plugin_slug)
+                'description'   => __('Enable or disable newsletter subscribe form on the front-end.', $this->plugin_slug)
             ),
             array(
                 'field_id'      =>  'email',
@@ -232,11 +244,15 @@ class CcComingSoonAdminOptions extends AdminPageFramework {
                 'type'          =>  'revealer',
                 'title'         =>  __('Logo Type', $this->plugin_slug),
                 'description'   =>  __('Your logo can be either an image or a text.', $this->plugin_slug),
-                'default'       =>  '#fieldrow-content_logo_image',
+                'default'       =>  'image',
                 'label'         =>  array(
-                    '#fieldrow-content_logo_image' => __( 'Image', $this->plugin_slug ),       
-                    '#fieldrow-content_logo_text' => __( 'Text', $this->plugin_slug )
+                    'image' => __( 'Image', $this->plugin_slug ),       
+                    'text' => __( 'Text', $this->plugin_slug )
                 ),
+                'reveals'       =>  array( 
+                    'image'     =>  '#fieldrow-content_logo_image',
+                    'text'   =>  '#fieldrow-content_logo_text',
+                )
             ),
             array(
                 'field_id'  =>  'logo_image',
@@ -296,28 +312,36 @@ class CcComingSoonAdminOptions extends AdminPageFramework {
                 'type'          =>  'color',
                 'title'         =>  __('Background Color', $this->plugin_slug)
             ),
-            array(
+             array(
                 'field_id'      =>  'type',
                 'type'          =>  'revealer',
-                'title'         =>  __('Background Image Type', $this->plugin_slug),
+                'title'         =>  __('Background Type', $this->plugin_slug),
                 'description'   =>  __('Your background can be either a full image or a pattern.', $this->plugin_slug),
                 'default'       =>  'undefined',
                 'label'         =>  array(
-                    'undefined' => __( 'No Image', $this->plugin_slug ),       
-                    '#fieldrow-background_attachment, #fieldrow-background_image' => __( 'Full Image', $this->plugin_slug ),       
-                    '#fieldrow-background_attachment, #fieldrow-background_repeat, #fieldrow-background_pattern' => __( 'Pattern', $this->plugin_slug )
+                    'no' => __( 'No Image', $this->plugin_slug ),       
+                    'image' => __( 'Full Image', $this->plugin_slug ),       
+                    'pattern' => __( 'Pattern', $this->plugin_slug )
                 ),
+                'reveals'       =>  array(
+                    'no'        =>  'undefined',
+                    'image'     =>  '#fieldrow-background_attachment, #fieldrow-background_image',
+                    'pattern'   =>  '#fieldrow-background_attachment, #fieldrow-background_repeat, #fieldrow-background_pattern',
+                ),
+                'order'         =>  20
             ),
             array(
                 'field_id'      =>  'image',
                 'type'          =>  'image',
                 'title'         =>  __('Background Image', $this->plugin_slug),
-                'description'   =>  __('Your image will be expanded to cover whole page.', $this->plugin_slug),
+                'description'   =>  __('Your image will be expanded to cover the whole page.', $this->plugin_slug),
+                'order'         =>  30
             ),
             array(
                 'field_id'      =>  'pattern',
                 'type'          =>  'image',
-                'title'         =>  __('Pattern Image', $this->plugin_slug)
+                'title'         =>  __('Pattern Image', $this->plugin_slug),
+                'order'         =>  40
             ),
             array(
                 'field_id'      =>  'repeat',
@@ -329,7 +353,8 @@ class CcComingSoonAdminOptions extends AdminPageFramework {
                     'repeat'    =>  __('Repeat', $this->plugin_slug),
                     'repeat-x'  =>  __('Repeat Horizontally', $this->plugin_slug),
                     'repeat-y'  =>  __('Repeat Vertically', $this->plugin_slug)
-                )
+                ),
+                'order'         =>  50
             ),
             array(
                 'field_id'      => 'attachment',
@@ -340,10 +365,10 @@ class CcComingSoonAdminOptions extends AdminPageFramework {
                     'fixed'   => 'Yes',
                     'scroll'    => 'No'   
                 ),
-                'description'   => __('Select Yes, if you do not want the background to scroll with the content.', $this->plugin_slug)
+                'description'   => __('Select Yes, if you do not want the background to scroll with the content.', $this->plugin_slug),
+                'order'         =>  60
             )
-
-        );
+        ); 
 
         /**
          * Text logo
@@ -357,7 +382,7 @@ class CcComingSoonAdminOptions extends AdminPageFramework {
             ),
             array(
                 'field_id'      =>  'font',
-                'title'         =>  __('Font Family', $this->plugin_slug),
+                'title'         =>  __('Logo Font', $this->plugin_slug),
                 'type'          =>  'gwf'
             )
         );
@@ -383,10 +408,156 @@ class CcComingSoonAdminOptions extends AdminPageFramework {
                 'type'          =>  'color'
             )
         );
+		
+		/**
+         * Content fonts
+         */
+        $this->addSettingFields(
+            'content_fonts',
+            array(
+                'field_id'      => 'header_font',
+                'type'          => 'gwf',
+                'title'         => __('Header Font', $this->plugin_slug), 
+				'default'       =>  'undefined',
+                'order'         =>  10
+            ),
+            array(
+                'field_id'      => 'content_font',
+                'type'          => 'gwf',
+                'title'         => __('Content Font', $this->plugin_slug), 
+				'default'       =>  'undefined',
+                'order'         =>  20
+            ),
+            array(
+                'field_id'      => 'input_font',
+                'type'          => 'gwf',
+                'title'         => __('Input Font', $this->plugin_slug), 
+                'order'         =>  10
+            ),
+            array(
+                'field_id'      => 'button_font',
+                'type'          => 'gwf',
+                'title'         => __('Button Font', $this->plugin_slug), 
+                'order'         =>  10
+            ),
+            array(
+                'field_id'      => 'message_font',
+                'type'          => 'gwf',
+                'title'         => __('Message Font', $this->plugin_slug), 
+                'order'         =>  10
+            )
+        );  
+		
+		/**
+         * Subscribe form
+         */
+        $this->addSettingFields(
+            'subscribe_strings',
+            array(
+                'field_id'      => 'subscribe_field',
+                'type'          => 'text',
+                'title'         => __('Subscribe Field', $this->plugin_slug),
+                'default'       =>  'Be the first to know', 
+                'order'         =>  10
+            ),
+            array(
+                'field_id'      => 'subscribe_button',
+                'type'          => 'text',
+                'title'         => __('Subscribe Button', $this->plugin_slug),
+                'default'       =>  'Submit', 
+                'order'         =>  20
+            ), 
+            array(
+                'field_id'      => 'thank_u_message',
+                'type'          => 'text',
+                'title'         => __('Success message', $this->plugin_slug),
+                'default'       =>  'Thank you! We will notify you as soon as we launch.', 
+                'order'         =>  30
+            )
+        );
     }
 
     public function do_before_cc_coming_soon() {
+		echo '<a class="button button-secondary right button-hero" style="margin: 25px 20px 0px 2px; padding: 0px 20px;
+height: 47px;" href="https://shop.chop-chop.org/contact" target="_blank">'.__('Contact Support',$this->plugin_slug).'</a>';
         echo '<a class="button button-primary right button-hero" href="http://ch-ch.org/cspro" style="margin: 25px 20px 0 2px;">Get Pro</a>';
+		
+		
+    } 
+	
+	public function content_bottom_cc_coming_soon_settings() {
+		$this->options_reseter('settings');  
+    }
+	
+	public function content_bottom_cc_coming_soon_content() {
+		$this->options_reseter('content');  
+    }
+	
+	public function content_bottom_cc_coming_soon_design() {
+		$this->options_reseter('design');  
+    }
+	
+	private function options_reseter($tab) {
+        echo '<a href="'.
+		 	esc_url(
+				add_query_arg(
+					array(
+						'cc-settings-reset' => "true",
+						'section' => $tab,
+						'_wpnonce' => wp_create_nonce('cc_cs_reset_'.$tab) 
+						
+					),
+					'//' . $_SERVER["HTTP_HOST"] . $_SERVER["REQUEST_URI"]
+				)
+			).'" class="button right" style="margin: -72px 20px 0px 2px; position: relative; z-index: 9999;">'.__('Reset to Default',$this->plugin_slug).'</a>';
+    }
+	
+	public function load_cc_coming_soon(){
+		 
+		// handle notices
+        if(isset($_GET['settings-updated'])) {
+            if($_GET['settings-updated'] === 'r-true') {
+                $this->setAdminNotice('Settings reset.', 'updated');
+            } elseif($_GET['settings-updated'] === 'r-false') {
+                $this->setAdminNotice('Nothing to reset.');
+            }
+        }
+		 
+			$util = new AdminPageFramework_WPUtility; 
+			if(isset($_GET['cc-settings-reset'])) {
+				$tab = $_GET['tab'];
+				check_admin_referer('cc_cs_reset_'.$tab);
+				
+				$all_sections = $this->oForm->aSections;
+				
+				$to_reset = array();
+				 
+				 
+				foreach($all_sections as $section)
+				{
+					if(count($section) && $section['tab_slug'] == $tab && $section['section_id'] != 'license')
+					{
+						$to_reset[] = 	$section['section_id'];
+					}		
+				}
+				
+				if(!empty($to_reset))
+				{
+					if($this->plugin->reset_options_to_default($to_reset,$tab)) 
+					{
+						wp_redirect($util->getQueryAdminURL(array('settings-updated' => 'r-true'), array('_wpnonce', 'cc-settings-reset','section')));
+					} 
+					else 
+					{
+						wp_redirect($util->getQueryAdminURL(array('settings-updated' => 'r-false'), array('_wpnonce', 'cc-settings-reset','section')));
+					}
+				}
+				else 
+				{
+					wp_redirect($util->getQueryAdminURL(array('settings-updated' => 'r-false'), array('_wpnonce', 'cc-settings-reset','section')));
+				}
+			} 
+		
     }
 
     public function content_cc_coming_soon_templates() {

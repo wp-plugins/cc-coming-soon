@@ -2,8 +2,21 @@
 return array (
   'status' => 
   array (
-    'enabled' => 'yes',
+    'enabled' => 'yes', 
   ),
+  'access_control' =>
+  array(
+  	'role' => 
+	array(
+		'all' => false,
+		'subscriber' => false,
+     	'contributor' => false,
+      	'author' => false,
+      	'editor' => false,
+     	'administrator' => true,
+	),
+	'page_access' => null,
+  ), 
   'social_services' => 
   array (
     'urls' => 
@@ -31,6 +44,7 @@ var s = document.getElementsByTagName(\'script\')[0]; s.parentNode.insertBefore(
   'newsletter' => 
   array (
     'enabled' => 'yes',
+	'adapter' => 'Email',
     'email' => '',
   ),
   'mailchimp' => 
@@ -39,7 +53,7 @@ var s = document.getElementsByTagName(\'script\')[0]; s.parentNode.insertBefore(
   ),
   'content' => 
   array (
-    'logo_type' => '#fieldrow-content_logo_text',
+    'logo_type' => 'text',
     'logo_image' => '',
     'logo_text' => 'Company Name',
     'header_text' => 'Here goes your catchy header',
@@ -74,10 +88,10 @@ var s = document.getElementsByTagName(\'script\')[0]; s.parentNode.insertBefore(
   ),
   'content_fonts' => 
   array (
-    'header_font' => 'Pacifico',
-    'content_font' => 'Pacifico',
-    'input_font' => 'Pacifico',
-    'button_font' => 'Pacifico',
-    'message_font' => 'Pacifico'
-  ),
+    'header_font' => 'Oswald',
+    'content_font' => 'Open+Sans',
+    'input_font' => 'Open+Sans',
+    'button_font' => 'Oswald',
+    'message_font' => 'Oswald'  
+  )
 );

@@ -25,7 +25,8 @@ class RevealerCustomFieldType extends AdminPageFramework_FieldType {
 			),
 			'optgroup'	=> array(),
 			'option'	=> array(),
-		),		
+		),
+		'reveals'		=> array()		
 	);
 
 	/**
@@ -86,7 +87,7 @@ class RevealerCustomFieldType extends AdminPageFramework_FieldType {
 	/**
 	 * Returns the output of the field type.
 	 */
-	protected function getField( $aField ) { 
+	protected function getField( $aField ) {
 				
 		$aSelectAttributes = array(
 			'id'	=>	$aField['input_id'],
@@ -101,7 +102,7 @@ class RevealerCustomFieldType extends AdminPageFramework_FieldType {
 					. $aField['before_input']
 					. "<span class='admin-page-framework-input-container'>"
 						. "<select " . $this->generateAttributes( $aSelectAttributes ) . " >"
-							. $this->_getOptionTags( $aField['input_id'], $aField['attributes'], $aField['label'] )
+							. $this->_getOptionTags( $aField['input_id'], $aField['attributes'], $aField['label'], $aField['reveals'] )
 						. "</select>"
 					. "</span>"
 					. $aField['after_input']
@@ -110,11 +111,11 @@ class RevealerCustomFieldType extends AdminPageFramework_FieldType {
 			. "</div>"
 			. $aField['after_label']
 			. $this->getRevealerScript( $aField['input_id'] )
-			. $this->getConcealerScript( $aField['label'], $aField['input_id'] )
+			. $this->getConcealerScript( $aField['reveals'], $aField['input_id'] )
 			;
 		
 	}
-		protected function _getOptionTags( $sInputID, &$aAttributes, $aLabel ) {
+		protected function _getOptionTags( $sInputID, &$aAttributes, $aLabel, $aReveals ) {
 			
 			$aOutput = array();
 			$aValue = ( array ) $aAttributes['value'];
@@ -130,7 +131,7 @@ class RevealerCustomFieldType extends AdminPageFramework_FieldType {
 						
 					$aOutput[] = 
 						"<optgroup label='{$sKey}'" . $this->generateAttributes( $aOptGroupAttributes ) . ">"
-						. $this->_getOptionTags( $sInputID, $aAttributes, $asLabel )
+						. $this->_getOptionTags( $sInputID, $aAttributes, $asLabel, $aReveals )
 						. "</optgroup>";
 					continue;
 					
@@ -150,6 +151,10 @@ class RevealerCustomFieldType extends AdminPageFramework_FieldType {
 					: $aAttributes['option']
 				);
 
+				if(isset($aReveals[$sKey])) {
+					$aOptionAttributes['data-reveals'] = $aReveals[$sKey];
+				}
+
 				$aOutput[] =
 					"<option " . $this->generateAttributes( $aOptionAttributes ) . " >"	
 						. $asLabel
@@ -168,15 +173,14 @@ class RevealerCustomFieldType extends AdminPageFramework_FieldType {
 					});				
 				</script>";	
 		}
-		private function getConcealerScript( $aLabels, $sInputID ) {
-			
-			unset( $aLabels['undefined'] );	// this is an internal reserved key	
-			
-			$aLabels = json_encode( array_keys( $aLabels ) );	// encode it to be usable in JavaScript
+		private function getConcealerScript( $aReveals, $sInputID ) {
+
+			$aReveals = json_encode( array_values( $aReveals ) );	// encode it to be usable in JavaScript
+
 			return 
 				"<script type='text/javascript' class='admin-page-framework-revealer-field-type-concealer-script'>
 					jQuery( document ).ready( function(){
-						jQuery.each( {$aLabels}, function( sKey, sValue ) {
+						jQuery.each( {$aReveals}, function( sKey, sValue ) {
 							jQuery( sValue ).hide();
 						});
 						jQuery( '#{$sInputID}' ).trigger('change');
@@ -195,13 +199,19 @@ class RevealerCustomFieldType extends AdminPageFramework_FieldType {
 		(function ( $ ) {
 		
 			$.fn.reveal = function() {
-				
+
 				var aSettings = [];
 				this.change( function() {
-					
-					var _sTargetSelector = jQuery( this ).val();
+
+					var _sTargetSelector = jQuery( this ).find(':selected').data('reveals');
 					var nodeElementToReveal = jQuery( _sTargetSelector );
-					if ( _sTargetSelector == 'undefined' ) return;
+
+					if ( _sTargetSelector == 'undefined' ) {
+						jQuery.each( jQuery(this).find('option'), function( sKey, sValue ) {
+							jQuery( jQuery(this).data('reveals') ).hide();
+						});
+						return;
+					}
 					
 					var sLastRevealedSelector = aSettings.hasOwnProperty( 'last_revealed_id' ) ? aSettings['last_revealed_id'] : undefined;
 					aSettings['last_revealed_id'] = _sTargetSelector;
