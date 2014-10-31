@@ -123,7 +123,7 @@ class CcComingSoon {
 		add_action( 'wp_ajax_nopriv_cc_cs_newsletter_subscribe', array( $this, 'ajax_newsletter_subscribe' ));
 
 		// Display Coming Soon Page
-		add_action( 'init', array( $this, 'on_init' ) );
+		add_action( 'template_redirect', array( $this, 'on_init' ) );
 
 	}
 
