@@ -67,7 +67,7 @@ class CcComingSoon {
 	 *
 	 * @var     string
 	 */
-	const VERSION = '0.1.1';
+	const VERSION = '0.2.2';
 
 	/**
 	 * Unique identifier for your plugin.
@@ -124,6 +124,8 @@ class CcComingSoon {
 
 		// Display Coming Soon Page
 		add_action( 'template_redirect', array( $this, 'on_init' ) );
+		
+		add_filter( 'cc_the_content', array( $this, 'cc_the_content' ) );
 
 	}
 
@@ -479,5 +481,27 @@ class CcComingSoon {
 		}
 		
 	}
-
+	
+	public function cc_the_content($content = null) {
+		
+		remove_all_filters('the_content');
+		
+		 $allow_filters = array(
+			'capital_P_dangit',
+			'do_shortcode',
+			'wptexturize',
+			'convert_smilies',
+			'convert_chars',
+			'wpautop',
+			'shortcode_unautop',
+			'prepend_attachment',
+		);
+		
+		foreach($allow_filters as $filter)
+		{	
+			add_filter('the_content', $filter); 
+		}
+		return  apply_filters('the_content', $content);
+	}
+	
 }

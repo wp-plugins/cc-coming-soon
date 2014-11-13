@@ -150,7 +150,7 @@ $options = $this->get_options();
 
                 <main class="clearfix">
                     <h1><?php echo $options['content']['header_text']; ?></h1>
-                    <?php echo apply_filters('the_content', $options['content']['message_text']); ?>
+                    <?php echo apply_filters('cc_the_content', $options['content']['message_text']); ?> 
                 </main>
                 
                 <?php if($this->get_option('newsletter', 'enabled') === 'yes'): ?>
@@ -197,12 +197,9 @@ $options = $this->get_options();
             </footer>
         </div>
         <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
-		<?php if($background_type === 'slider'): ?> 
-			<script src="<?php echo $includes_url.'bxslider/jquery.bxslider.min.js'; ?>"></script> 
-		<?php endif;?>
+		 
         <script>
             $(document).ready(function(){ 
-				
                 <?php if($this->get_option('google_adwords', 'conversion_code')): ?>
                 var conversion_code = <?php echo json_encode($this->get_option('google_adwords', 'conversion_code')); ?>;
                 <?php endif; ?>
@@ -240,7 +237,9 @@ $options = $this->get_options();
 
                         if(response.status === 'ok') {
                             fadeIn(document.querySelector("#thank-you"));
+							 <?php if($this->get_option('google_adwords', 'conversion_code')): ?>
                             $(conversion_code).appendTo('body');
+							<?php endif; ?>
                         }
 
                       }

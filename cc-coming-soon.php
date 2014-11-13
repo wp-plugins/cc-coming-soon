@@ -11,7 +11,7 @@
  * Plugin Name:       Coming Soon CC
  * Plugin URI:        https://shop.chop-chop.org
  * Description:       An elegant Coming Soon page in just a few clicks.
- * Version:           0.2.1
+ * Version:           0.2.2
  * Author:            Chop-Chop.org
  * Author URI:        http://chop-chop.org
  * Text Domain:       cc-coming-soon-locale
@@ -60,3 +60,4 @@ if ( is_admin() && ( ! defined( 'DOING_AJAX' ) || ! DOING_AJAX ) ) {
 	add_action( 'init', array( 'CcComingSoonAdmin', 'get_instance' ) );
 
 }
+ 
