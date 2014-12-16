@@ -3,7 +3,7 @@ Contributors: chopchoporg
 Tags: coming soon, wordpress coming soon, coming soon page, simple coming soon, coming soon template, coming soon theme, coming soon plugin, easy coming soon
 Requires at least: 3.5.1
 Tested up to: 4.0
-Stable tag: 0.2.2
+Stable tag: 0.2.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -109,6 +109,9 @@ Contact shop@chop-chop.org if you have any questions or wish to provide feedback
 9. Admin panel
 
 == Changelog == 
+
+= 0.2.3 =
+The options to change colors of buttons and icons
 
 = 0.2.2 =
 "the_content" filters fix

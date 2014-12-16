@@ -67,7 +67,7 @@ class CcComingSoon {
 	 *
 	 * @var     string
 	 */
-	const VERSION = '0.2.2';
+	const VERSION = '0.2.3';
 
 	/**
 	 * Unique identifier for your plugin.

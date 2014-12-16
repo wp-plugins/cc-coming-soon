@@ -122,6 +122,22 @@ $options = $this->get_options();
 		<?php if($font = $this->get_option('content_fonts', 'header_font')): ?>
        		h1, h2, h3, h4, h5, h6  { font-family: <?php echo str_replace("+", " ", $font); ?>;}
  		<?php endif; ?>
+		
+		<?php if($button_color = $this->get_option('font', 'button_color')): ?>
+       		#newsletter button, #thank-you { background-color:<?php echo $button_color; ?>;} 
+			#thank-you:after { border-top-color: <?php echo $button_color; ?>;} 
+			@media only screen and (min-width: 768px) {
+				#thank-you:after { border-bottom-color: <?php echo $button_color; ?>;} 
+			}
+ 		<?php endif; ?>
+		
+		<?php if($icons_color = $this->get_option('font', 'icons_color')): ?>
+       		.social-links li a:before  { color:<?php echo $icons_color; ?>;}
+ 		<?php endif; ?>
+		
+		<?php if($icons_background_color = $this->get_option('font', 'icons_background_color')): ?>
+       		.social-links li a  { background-color:<?php echo $icons_background_color; ?>;}
+ 		<?php endif; ?>
         </style>
 
         <!--[if lt IE 9]>

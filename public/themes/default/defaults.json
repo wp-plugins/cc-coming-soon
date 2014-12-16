@@ -7,11 +7,14 @@
 		"text_logo": {
 			"color": "#000000",
 			"font": "Pacifico"
-		},
+		}, 
 		"font": {
 			"text_color": "#989898",
 			"header_color": "#000000",
-			"link_color": "#484848"
+			"link_color": "#484848",
+			"button_color": "#000000",
+			"icons_color": "#ffffff",
+			"icons_background_color": "#000000"
 		},
 		"content_fonts": {
 			"header_font":"Oswald",
