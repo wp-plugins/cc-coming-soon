@@ -406,6 +406,24 @@ class CcComingSoonAdminOptions extends AdminPageFramework {
                 'field_id'      =>  'link_color',
                 'title'         =>  __('Link Color', $this->plugin_slug),
                 'type'          =>  'color'
+            ),
+            array(
+                'field_id'      =>  'button_color',
+                'title'         =>  __('Button Color', $this->plugin_slug),
+                'type'          =>  'color',
+                'order'         =>  40
+            ),
+            array(
+                'field_id'      =>  'icons_color',
+                'title'         =>  __('Icons Color', $this->plugin_slug),
+                'type'          =>  'color',
+                'order'         =>  50
+            ),
+            array(
+                'field_id'      =>  'icons_background_color',
+                'title'         =>  __('Icons Background Color', $this->plugin_slug),
+                'type'          =>  'color',
+                'order'         =>  60
             )
         );
 		

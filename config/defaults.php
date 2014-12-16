@@ -79,6 +79,9 @@ var s = document.getElementsByTagName(\'script\')[0]; s.parentNode.insertBefore(
     'text_color' => '#989898',
     'header_color' => '#000000',
     'link_color' => '#484848',
+	"button_color" => "#000000",
+	"icons_color" => "#ffffff",
+	"icons_background_color" => "#000000"
   ),
   'subscribe_strings' => 
   array (
