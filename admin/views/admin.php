@@ -104,7 +104,7 @@ class CcComingSoonAdminOptions extends AdminPageFramework {
                 'section_id'    =>  'mailchimp',
                 'tab_slug'      =>  'settings',
                 'title'         =>  __('Mailchimp', $this->plugin_slug),
-                'description'   =>  __('This option is available in Pro version.', $this->plugin_slug)
+                'description'   =>  sprintf(__('<a href="%s">Get Coming Soon CC Pro</a> for MailChimp integration.', $this->plugin_slug), 'http://ch-ch.org/cspro')
             ),
             array(
                 'section_id'    =>  'content',
@@ -154,7 +154,7 @@ class CcComingSoonAdminOptions extends AdminPageFramework {
                     'yes'   => __('Activated', $this->plugin_slug),
                     'no'    => __('Deactivated', $this->plugin_slug)
                 ),
-                'description'   => __('By default Coming Soon page is visible only to the unlogged users.', $this->plugin_slug)
+                'description'   => sprintf(__('By default only the Administrator(s) can see the actual website. <a href="%s">Get Coming Soon CC Pro</a> to decide which user roles can see the actual page.', $this->plugin_slug), 'http://ch-ch.org/cspro')
             )
         );
 
@@ -316,17 +316,29 @@ class CcComingSoonAdminOptions extends AdminPageFramework {
                 'field_id'      =>  'type',
                 'type'          =>  'revealer',
                 'title'         =>  __('Background Type', $this->plugin_slug),
-                'description'   =>  __('Your background can be either a full image or a pattern.', $this->plugin_slug),
+                'description'   =>  sprintf(__('Your background can be either a full image or a pattern.<br/><a href="%s">Get Coming Soon CC Pro</a>', $this->plugin_slug), 'http://ch-ch.org/cspro'),
                 'default'       =>  'undefined',
                 'label'         =>  array(
                     'no' => __( 'No Image', $this->plugin_slug ),       
                     'image' => __( 'Full Image', $this->plugin_slug ),       
-                    'pattern' => __( 'Pattern', $this->plugin_slug )
+                    'pattern' => __( 'Pattern', $this->plugin_slug ),
+                    'slider' => __('Background Slider (Available in Pro)', $this->plugin_slug),
+                    'video' => __('Video Slider (Available in Pro)', $this->plugin_slug)
                 ),
                 'reveals'       =>  array(
                     'no'        =>  'undefined',
                     'image'     =>  '#fieldrow-background_attachment, #fieldrow-background_image',
                     'pattern'   =>  '#fieldrow-background_attachment, #fieldrow-background_repeat, #fieldrow-background_pattern',
+                ),
+                'attributes'    => array(
+                    'option'    => array(
+                        'slider'   => array(
+                            'disabled'  => 'disabled'
+                        ),
+                        'video'   => array(
+                            'disabled'  => 'disabled'
+                        )
+                    )
                 ),
                 'order'         =>  20
             ),
@@ -488,7 +500,7 @@ class CcComingSoonAdminOptions extends AdminPageFramework {
             array(
                 'field_id'      => 'thank_u_message',
                 'type'          => 'text',
-                'title'         => __('Success message', $this->plugin_slug),
+                'title'         => __('Success Message', $this->plugin_slug),
                 'default'       =>  'Thank you! We will notify you as soon as we launch.', 
                 'order'         =>  30
             )
