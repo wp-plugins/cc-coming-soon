@@ -199,12 +199,13 @@ $options = $this->get_options();
                             'twitter',
                             'youtube',
                             'vimeo',
-                            'instagram'
+                            'instagram',
+                            'linkedin'
                         );
                     ?>
 
                     <?php foreach($services as $key => $service): ?>
-                        <?php if($url = $options['social_services']['urls'][$key]): ?>
+                        <?php if(isset($options['social_services']['urls'][$key]) && $url = $options['social_services']['urls'][$key]): ?>
                             <li><a href="<?php echo $url; ?>" class="icon-<?php echo $service; ?>"></a></li>
                         <?php endif; ?>
                     <?php endforeach; ?>

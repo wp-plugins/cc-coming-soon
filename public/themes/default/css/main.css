@@ -60,6 +60,9 @@
 .icon-email-envelope:before {
   content: "h";
 }
+.icon-linkedin:before {
+  content: "a";
+}
 
 html,
 button,
@@ -347,6 +350,7 @@ button {
     #newsletter {
         width: 600px;
         padding: 6px;
+        position: relative;
     }
 
     #newsletter input {
@@ -364,8 +368,11 @@ button {
     }
 
     #newsletter p:last-child {
-        width: 19%;
-        float: right;
+        min-width: 19%;
+        position: absolute;
+        top: 6px;
+        right: 6px;
+        max-width: 50%;
     }
 
     #thank-you {
