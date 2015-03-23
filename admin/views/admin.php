@@ -184,6 +184,9 @@ class CcComingSoonAdminOptions extends AdminPageFramework {
                 ),
                 array(
                     'label'     =>  __('LinkedIn', $this->plugin_slug)
+                ),
+                array(
+                    'label'     => __('Pinterest', $this->plugin_slug)
                 )
             )
         );

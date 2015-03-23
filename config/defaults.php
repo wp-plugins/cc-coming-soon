@@ -26,7 +26,8 @@ return array (
       2 => 'https://www.youtube.com',
       3 => 'https://vimeo.com',
       4 => 'https://instagram.com',
-      5 => 'https://www.linkedin.com/'
+      5 => 'https://www.linkedin.com/',
+      6 => 'https://www.pinterest.com/'
     ),
   ),
   'google_analytics' => 
