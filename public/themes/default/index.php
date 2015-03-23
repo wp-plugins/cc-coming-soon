@@ -200,7 +200,8 @@ $options = $this->get_options();
                             'youtube',
                             'vimeo',
                             'instagram',
-                            'linkedin'
+                            'linkedin',
+                            'pinterest'
                         );
                     ?>
 
