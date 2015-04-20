@@ -3,7 +3,7 @@ Contributors: chopchoporg
 Tags: coming soon, wordpress coming soon, coming soon page, simple coming soon, coming soon template, coming soon theme, coming soon plugin, easy coming soon
 Requires at least: 3.5.1
 Tested up to: 4.1.1
-Stable tag: 0.2.6
+Stable tag: 2.0.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -11,7 +11,7 @@ Coming Soon page with professional templates.
 
 == Description ==
 
-Coming Soon CC comes with a beautiful professional default template which you can fully customize to your needs. It's simple and flexible and works with any WordPress theme.
+Coming Soon CC comes with a beautiful professional default template which you can fully customize to your needs with our amazing visual editor. It's simple and flexible and works with any WordPress theme.
 
 Live preview: [Default Coming Soon Page](https://shop.chop-chop.org/demo/cc-coming-soon-pro/?template=default)
 
@@ -22,6 +22,7 @@ A good coming soon page is profitable for both start-ups and bigger companies to
 **Features:**
 
 * [Beautiful design](https://shop.chop-chop.org/demo/cc-coming-soon-pro/?template=default)
+* Custom visual editor
 * Works with all WordPress themes   
 * Responsive HTML5/CSS3 layout
 * Quick and easy setup
@@ -44,8 +45,14 @@ A good coming soon page is profitable for both start-ups and bigger companies to
 * [Calm Coming Soon Page](https://shop.chop-chop.org/demo/cc-coming-soon-pro/?template=calm) - a gentle waiting mood
 * [Chic Coming Soon Page](https://shop.chop-chop.org/demo/cc-coming-soon-pro/?template=chic) - elegant and alluring
 * [Fitness Coming Soon Page](https://shop.chop-chop.org/demo/cc-coming-soon-pro/?template=fitness) - pump up your fitness startup
+* Video background
+* Slideshow background
+* Storing emails in WordPress database
 * MailChimp integration
+* GetResponse integration
+* Campaign Monitor integration
 * Google AdWords conversion code integration
+* Access control (access by role, access by page)
 
 [Get Coming Soon CC Pro with more beautiful designs](https://shop.chop-chop.org/?utm_source=free-plugin&utm_medium=link&utm_campaign=available-in-pro)
 
@@ -88,11 +95,7 @@ If you are logged out and still can't see your coming soon page, try clearing yo
 
 The additional templates are available in the premium version. Get it here: https://shop.chop-chop.org to activate more themes.
 
-**3. Can you add/edit HTML or CSS for me?**
-
-We offer a paid service if you need more advanced customization. Contact us if you are interested: shop@chop-chop.org
-
-**4. Questions? Comments?**
+**3. Questions? Comments?**
 
 Contact shop@chop-chop.org if you have any questions or wish to provide feedback.
 
@@ -107,8 +110,13 @@ Contact shop@chop-chop.org if you have any questions or wish to provide feedback
 7. [Fitness Coming Soon Page (Pro)](https://shop.chop-chop.org/demo/cc-coming-soon-pro/?template=fitness)
 8. [Available templates (Pro)](https://shop.chop-chop.org/?utm_source=free-plugin&utm_medium=link&utm_campaign=available-in-pro)
 9. Admin panel
+10. Visual editor
 
 == Changelog == 
+
+= 2.0.0 =
+New: Visual editor integration
+New: Admin panel styles
 
 = 0.2.6 =
 New: Pinterest icon

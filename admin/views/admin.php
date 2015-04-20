@@ -32,7 +32,7 @@ class CcComingSoonAdminOptions extends AdminPageFramework {
 
         $plugin = CcComingSoon::get_instance();
         $this->plugin_slug = $plugin->get_plugin_slug();
-		$this->plugin = CcComingSoon::get_instance();
+        $this->plugin = CcComingSoon::get_instance();
         $this->setRootMenuPage( 'Settings' );
 
         $this->addSubMenuItems(
@@ -49,28 +49,18 @@ class CcComingSoonAdminOptions extends AdminPageFramework {
             'cc_coming_soon',
             array(
                 'tab_slug'      =>  'templates',
-                'title'         =>  __('Templates', $this->plugin_slug),
+                'title'         =>  __('<span class="dashicons dashicons-format-gallery"></span> Templates', $this->plugin_slug),
                 'order'         =>  5
             ),
             array(
+                'tab_slug'      =>  'background',
+                'title'         =>  __('<span class="dashicons dashicons-format-image"></span> Background', $this->plugin_slug),
+                'order'         =>  10,
+            ),
+            array(
                 'tab_slug'      =>  'settings',
-                'title'         =>  __('Settings', $this->plugin_slug),
-                'order'         =>  10
-            ),
-            array(
-                'tab_slug'      =>  'content',
-                'title'         =>  __('Content', $this->plugin_slug),
-                'order'         =>  20
-            ),
-            array(
-                'tab_slug'      =>  'design',
-                'title'         =>  __('Design', $this->plugin_slug),
-                'order'         =>  30
-            ),
-            array(
-                'tab_slug'      =>  'live_preview',
-                'title'         =>  __('Live Preview', $this->plugin_slug),
-                'order'         =>  40
+                'title'         =>  __('<span class="dashicons dashicons-admin-generic"></span> Settings', $this->plugin_slug),
+                'order'         =>  20,
             )
         );
         $this->setInPageTabTag( 'h2' );
@@ -88,7 +78,7 @@ class CcComingSoonAdminOptions extends AdminPageFramework {
             array(
                 'section_id'    =>  'social_services',
                 'tab_slug'      =>  'settings',
-                'title'         =>  __('Social services', $this->plugin_slug)
+                'title'         =>  __('Social Services', $this->plugin_slug)
             ),
             array(
                 'section_id'    =>  'google_analytics',
@@ -103,38 +93,38 @@ class CcComingSoonAdminOptions extends AdminPageFramework {
             array(
                 'section_id'    =>  'mailchimp',
                 'tab_slug'      =>  'settings',
-                'title'         =>  __('Mailchimp', $this->plugin_slug),
-                'description'   =>  sprintf(__('<a href="%s">Get Coming Soon CC Pro</a> for MailChimp integration.', $this->plugin_slug), 'http://ch-ch.org/cspro')
+                'title'         =>  __('MailChimp', $this->plugin_slug)
+                
             ),
             array(
                 'section_id'    =>  'content',
-                'tab_slug'      =>  'content',
+                'tab_slug'      =>  'templates',
                 'title'         =>  __('Coming Soon Page Content', $this->plugin_slug)
             ),
-			array(
+            array(
                 'section_id'    =>  'subscribe_strings',
-                'tab_slug'      =>  'content',
+                'tab_slug'      =>  'templates',
                 'title'         =>  __('Translations', $this->plugin_slug),
                 'order'         =>  20
             ),
             array(
                 'section_id'    =>  'background',
-                'tab_slug'      =>  'design',
+                'tab_slug'      =>  'background',
                 'title'         =>  __('Background', $this->plugin_slug)
             ),
             array(
                 'section_id'    =>  'text_logo',
-                'tab_slug'      =>  'design',
+                'tab_slug'      =>  'templates',
                 'title'         =>  __('Text Logo', $this->plugin_slug)
             ),
             array(
                 'section_id'    =>  'font',
-                'tab_slug'      =>  'design',
+                'tab_slug'      =>  'templates',
                 'title'         =>  __('Content', $this->plugin_slug)
             ),
-			array(
+            array(
                 'section_id'    =>  'content_fonts',
-                'tab_slug'      =>  'design',
+                'tab_slug'      =>  'templates',
                 'title'         =>  __('Content Fonts', $this->plugin_slug),
                 'order'         =>  40
             )
@@ -235,7 +225,9 @@ class CcComingSoonAdminOptions extends AdminPageFramework {
             'mailchimp',
             array(
                 'field_id'      => 'enabled',
-                'type'          => 'hidden'
+                'type'          => 'hidden',
+                'title'         => __('Status', $this->plugin_slug),
+                'description'   =>  sprintf(__('<a href="%s">Get Coming Soon CC Pro</a> for MailChimp integration.', $this->plugin_slug), 'http://ch-ch.org/cspro')
             )
         );
 
@@ -274,16 +266,11 @@ class CcComingSoonAdminOptions extends AdminPageFramework {
                 'field_id'  =>  'header_text',
                 'title'     =>  __('Header Text', $this->plugin_slug),
                 'type'      =>  'textarea',
-                'rich'  =>  array( 
-                    'media_buttons' =>  false,
-                    'teeny' => true
-                )
             ),
             array(
                 'field_id'  =>  'message_text',
                 'title'     =>  __('Message Text', $this->plugin_slug),
                 'type'  =>  'textarea',
-                'rich'  =>  true,
                 'attributes'    =>  array(
                     'rows'      =>  10,
                     'field' =>  array(
@@ -295,10 +282,6 @@ class CcComingSoonAdminOptions extends AdminPageFramework {
                 'field_id'      =>  'footer_note',
                 'type'          =>  'textarea',
                 'title'         =>  __('Footer Note', $this->plugin_slug),
-                'rich'          =>  array( 
-                    'media_buttons' =>  false,
-                    'teeny'         => true
-                )
             ),
             array(
                 'field_id'      =>  'favicon',
@@ -444,8 +427,8 @@ class CcComingSoonAdminOptions extends AdminPageFramework {
                 'order'         =>  60
             )
         );
-		
-		/**
+        
+        /**
          * Content fonts
          */
         $this->addSettingFields(
@@ -454,14 +437,14 @@ class CcComingSoonAdminOptions extends AdminPageFramework {
                 'field_id'      => 'header_font',
                 'type'          => 'gwf',
                 'title'         => __('Header Font', $this->plugin_slug), 
-				'default'       =>  'undefined',
+                'default'       =>  'undefined',
                 'order'         =>  10
             ),
             array(
                 'field_id'      => 'content_font',
                 'type'          => 'gwf',
                 'title'         => __('Content Font', $this->plugin_slug), 
-				'default'       =>  'undefined',
+                'default'       =>  'undefined',
                 'order'         =>  20
             ),
             array(
@@ -483,8 +466,8 @@ class CcComingSoonAdminOptions extends AdminPageFramework {
                 'order'         =>  10
             )
         );  
-		
-		/**
+        
+        /**
          * Subscribe form
          */
         $this->addSettingFields(
@@ -514,43 +497,39 @@ class CcComingSoonAdminOptions extends AdminPageFramework {
     }
 
     public function do_before_cc_coming_soon() {
-		echo '<a class="button button-secondary right button-hero" style="margin: 25px 20px 0px 2px; padding: 0px 20px;
+        echo '<a class="button button-secondary right button-hero" style="margin: 25px 20px 0px 2px; padding: 0px 20px;
 height: 47px;" href="https://shop.chop-chop.org/contact" target="_blank">'.__('Contact Support',$this->plugin_slug).'</a>';
         echo '<a class="button button-primary right button-hero" href="http://ch-ch.org/cspro" style="margin: 25px 20px 0 2px;">Get Pro</a>';
-		
-		
+        
+        
     } 
-	
-	public function content_bottom_cc_coming_soon_settings() {
-		$this->options_reseter('settings');  
+
+    public function content_bottom_cc_coming_soon_background() {
+        $this->options_reseter('background');  
     }
-	
-	public function content_bottom_cc_coming_soon_content() {
-		$this->options_reseter('content');  
+    
+    public function content_bottom_cc_coming_soon_settings() {
+        $this->options_reseter('settings');  
     }
-	
-	public function content_bottom_cc_coming_soon_design() {
-		$this->options_reseter('design');  
-    }
-	
-	private function options_reseter($tab) {
+    
+    private function options_reseter($tab) {
         echo '<a href="'.
-		 	esc_url(
-				add_query_arg(
-					array(
-						'cc-settings-reset' => "true",
-						'section' => $tab,
-						'_wpnonce' => wp_create_nonce('cc_cs_reset_'.$tab) 
-						
-					),
-					'//' . $_SERVER["HTTP_HOST"] . $_SERVER["REQUEST_URI"]
-				)
-			).'" class="button right" style="margin: -72px 20px 0px 2px; position: relative; z-index: 9999;">'.__('Reset to Default',$this->plugin_slug).'</a>';
+            esc_url(
+                add_query_arg(
+                    array(
+                        'cc-settings-reset' => "true",
+                        'section' => $tab,
+                        '_wpnonce' => wp_create_nonce('cc_cs_reset_'.$tab) 
+                        
+                    ),
+                    '//' . $_SERVER["HTTP_HOST"] . $_SERVER["REQUEST_URI"]
+                )
+            ).'" class="button right" style="margin: -72px 20px 0px 2px; position: relative; z-index: 9999;">'.__('Reset to Default',$this->plugin_slug).'</a>';
     }
-	
-	public function load_cc_coming_soon(){
-		 
-		// handle notices
+    
+    public function load_cc_coming_soon(){
+         
+        // handle notices
         if(isset($_GET['settings-updated'])) {
             if($_GET['settings-updated'] === 'r-true') {
                 $this->setAdminNotice('Settings reset.', 'updated');
@@ -558,61 +537,53 @@ height: 47px;" href="https://shop.chop-chop.org/contact" target="_blank">'.__('C
                 $this->setAdminNotice('Nothing to reset.');
             }
         }
-		 
-			$util = new AdminPageFramework_WPUtility; 
-			if(isset($_GET['cc-settings-reset'])) {
-				$tab = $_GET['tab'];
-				check_admin_referer('cc_cs_reset_'.$tab);
-				
-				$all_sections = $this->oForm->aSections;
-				
-				$to_reset = array();
-				 
-				 
-				foreach($all_sections as $section)
-				{
-					if(count($section) && $section['tab_slug'] == $tab && $section['section_id'] != 'license')
-					{
-						$to_reset[] = 	$section['section_id'];
-					}		
-				}
-				
-				if(!empty($to_reset))
-				{
-					if($this->plugin->reset_options_to_default($to_reset,$tab)) 
-					{
-						wp_redirect($util->getQueryAdminURL(array('settings-updated' => 'r-true'), array('_wpnonce', 'cc-settings-reset','section')));
-					} 
-					else 
-					{
-						wp_redirect($util->getQueryAdminURL(array('settings-updated' => 'r-false'), array('_wpnonce', 'cc-settings-reset','section')));
-					}
-				}
-				else 
-				{
-					wp_redirect($util->getQueryAdminURL(array('settings-updated' => 'r-false'), array('_wpnonce', 'cc-settings-reset','section')));
-				}
-			} 
-		
+         
+            $util = new AdminPageFramework_WPUtility; 
+            if(isset($_GET['cc-settings-reset'])) {
+                $tab = $_GET['tab'];
+                check_admin_referer('cc_cs_reset_'.$tab);
+                
+                $all_sections = $this->oForm->aSections;
+                
+                $to_reset = array();
+                 
+                 
+                foreach($all_sections as $section)
+                {
+                    if(count($section) && $section['tab_slug'] == $tab && $section['section_id'] != 'license')
+                    {
+                        $to_reset[] =   $section['section_id'];
+                    }       
+                }
+                
+                if(!empty($to_reset))
+                {
+                    if($this->plugin->reset_options_to_default($to_reset,$tab)) 
+                    {
+                        wp_redirect($util->getQueryAdminURL(array('settings-updated' => 'r-true'), array('_wpnonce', 'cc-settings-reset','section')));
+                    } 
+                    else 
+                    {
+                        wp_redirect($util->getQueryAdminURL(array('settings-updated' => 'r-false'), array('_wpnonce', 'cc-settings-reset','section')));
+                    }
+                }
+                else 
+                {
+                    wp_redirect($util->getQueryAdminURL(array('settings-updated' => 'r-false'), array('_wpnonce', 'cc-settings-reset','section')));
+                }
+            } 
+        
     }
 
     public function content_cc_coming_soon_templates() {
         include(dirname( __FILE__ ) . '/templates.php' );
     }
 
-    public function content_cc_coming_soon_live_preview() {
-        echo '<iframe id="themepreview" name="themepreview" src="'.get_option('home').'/?cc-cs-preview=1" width="100%" height="600px"></iframe>';
+    public function do_cc_coming_soon_background() {
+        $this->options_saver();
     }
 
     public function do_cc_coming_soon_settings() {
-        $this->options_saver();
-    }
-
-    public function do_cc_coming_soon_content() {
-        $this->options_saver();
-    }
-
-    public function do_cc_coming_soon_design() {
         $this->options_saver();
     }
 

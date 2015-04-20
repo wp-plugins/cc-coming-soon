@@ -132,7 +132,7 @@ $options = $this->get_options();
  		<?php endif; ?>
 		
 		<?php if($icons_color = $this->get_option('font', 'icons_color')): ?>
-       		.social-links li a:before  { color:<?php echo $icons_color; ?>;}
+       		.social-links li a i  { color:<?php echo $icons_color; ?>;}
  		<?php endif; ?>
 		
 		<?php if($icons_background_color = $this->get_option('font', 'icons_background_color')): ?>
@@ -151,12 +151,11 @@ $options = $this->get_options();
 		 
         <div class="header-container">
             <header class="wrapper clearfix">
-                <h1 class="title">
-                    <?php if($this->get_logo_type() === 'text'): ?>
-                        <?php echo $this->get_option('content', 'logo_text'); ?>
-                    <?php else: ?>
-                        <img src="<?php echo $this->get_option('content', 'logo_image'); ?>" alt="">
-                    <?php endif; ?>
+                <h1 class="title logo-image" style="<?php if($this->get_logo_type() === 'text'): ?>display: none;<?php endif; ?>">
+                    <img src="<?php echo $this->get_option('content', 'logo_image'); ?>" alt="">
+                </h1>
+                <h1 class="title logo-text" style="<?php if($this->get_logo_type() === 'image'): ?>display: none;<?php endif; ?>">
+                    <?php echo $this->get_option('content', 'logo_text'); ?>
                 </h1>
             </header>
         </div>
@@ -166,7 +165,9 @@ $options = $this->get_options();
 
                 <main class="clearfix">
                     <h1><?php echo $options['content']['header_text']; ?></h1>
-                    <?php echo apply_filters('cc_the_content', $options['content']['message_text']); ?> 
+                    <span class="message-text">
+                        <?php echo apply_filters('cc_the_content', $options['content']['message_text']); ?>
+                    </span>
                 </main>
                 
                 <?php if($this->get_option('newsletter', 'enabled') === 'yes'): ?>
@@ -207,11 +208,11 @@ $options = $this->get_options();
 
                     <?php foreach($services as $key => $service): ?>
                         <?php if(isset($options['social_services']['urls'][$key]) && $url = $options['social_services']['urls'][$key]): ?>
-                            <li><a href="<?php echo $url; ?>" class="icon-<?php echo $service; ?>"></a></li>
+                            <li><a href="<?php echo $url; ?>"><i class="icon-<?php echo $service; ?>"></i></a></li>
                         <?php endif; ?>
                     <?php endforeach; ?>
                 </ul>
-                <p class="clearfix"><?php echo $options['content']['footer_note']; ?></p>
+                <span class="footer-note clearfix"><p><?php echo $options['content']['footer_note']; ?></p></span>
             </footer>
         </div>
         <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
