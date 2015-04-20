@@ -67,7 +67,7 @@ class CcComingSoon {
 	 *
 	 * @var     string
 	 */
-	const VERSION = '0.2.6';
+	const VERSION = '2.0.0';
 
 	/**
 	 * Unique identifier for your plugin.
@@ -338,6 +338,13 @@ class CcComingSoon {
 
 		// is preview
 		if(isset($_GET['cc-cs-preview']) && $_GET['cc-cs-preview'] === '1') {
+			$this->show_cs_page();
+			return false;
+		}
+
+		// is customizer
+		if(isset($_GET['cc-cs-customize']) && $_GET['cc-cs-customize'] === '1') {
+			define('CC_CS_CUSTOMIZE', true);
 			$this->show_cs_page();
 			return false;
 		}
