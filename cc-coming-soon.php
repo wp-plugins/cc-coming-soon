@@ -5,13 +5,13 @@
  * @author    Chop-Chop.org <talk@chop-chop.org>
  * @license   GPL-2.0+
  * @link      https://shop.chop-chop.org
- * @copyright 2014 
+ * @copyright 2014
  *
  * @wordpress-plugin
  * Plugin Name:       Coming Soon CC
  * Plugin URI:        https://shop.chop-chop.org
  * Description:       An elegant Coming Soon page in just a few clicks.
- * Version:           2.0.0
+ * Version:           2.0.1
  * Author:            Chop-Chop.org
  * Author URI:        http://chop-chop.org
  * Text Domain:       cc-coming-soon-locale
@@ -60,4 +60,4 @@ if ( is_admin() && ( ! defined( 'DOING_AJAX' ) || ! DOING_AJAX ) ) {
 	add_action( 'init', array( 'CcComingSoonAdmin', 'get_instance' ) );
 
 }
- 
+

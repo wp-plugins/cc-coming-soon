@@ -6,7 +6,7 @@
  * @author    Chop-Chop.org <talk@chop-chop.org>
  * @license   GPL-2.0+
  * @link      https://shop.chop-chop.org
- * @copyright 2014 
+ * @copyright 2014
  */
 
 /**
@@ -15,7 +15,7 @@
  * @package CcComingSoon
  * @author  Chop-Chop.org <talk@chop-chop.org>
  */
- 
+
 if (!function_exists('array_replace_recursive'))
 {
   function array_replace_recursive($array, $array1)
@@ -67,7 +67,7 @@ class CcComingSoon {
 	 *
 	 * @var     string
 	 */
-	const VERSION = '2.0.0';
+	const VERSION = '2.0.1';
 
 	/**
 	 * Unique identifier for your plugin.
@@ -94,9 +94,9 @@ class CcComingSoon {
 
 	/**
 	 * Plugin options
-	 * 
+	 *
 	 * @since  0.1.0
-	 * 
+	 *
 	 * @var array
 	 */
 	protected $options = array();
@@ -124,7 +124,7 @@ class CcComingSoon {
 
 		// Display Coming Soon Page
 		add_action( 'template_redirect', array( $this, 'on_init' ) );
-		
+
 		add_filter( 'cc_the_content', array( $this, 'cc_the_content' ) );
 
 	}
@@ -288,7 +288,7 @@ class CcComingSoon {
 	 * @since    0.1.0
 	 */
 	private static function single_activate() {
-		
+
 		$defaults = (include(dirname( __FILE__ ) . '/../config/defaults.php'));
 
 		if(!get_option('CcComingSoonAdminOptions')) {
@@ -296,10 +296,10 @@ class CcComingSoon {
 		} else {
 
 			$options = get_option('CcComingSoonAdminOptions');
- 
+
 			// Save merged options
 			update_option('CcComingSoonAdminOptions', array_replace_recursive($defaults, $options));
-		} 
+		}
 	}
 
 	/**
@@ -430,7 +430,7 @@ class CcComingSoon {
 		$e = explode('_', $this->get_option('background', 'type'));
 		return array_pop($e);
 	}
-	
+
 	/**
 	 * reset_options_to_default
 	 * @return boolean
@@ -438,32 +438,32 @@ class CcComingSoon {
 	public function reset_options_to_default($sections,$tab) {
 			$options = (include(dirname( __FILE__ ) . '/../config/defaults.php'));
 			$current_settings = get_option('CcComingSoonAdminOptions');
-			
-			$to_reset = array(); 
-			
+
+			$to_reset = array();
+
 			foreach($sections as $section)
 			{
 				if(isset($options[$section]))
 				{
 				$to_reset[$section] = $options[$section];
 				}
-			} 
-			
+			}
+
 			if($tab != 'design')
-			{	
+			{
 				$settings = array_replace_recursive($current_settings, $to_reset);
 			}
 			elseif($tab == 'design')
 			{
-				$template =  'default'; 
-				$current_settings = array_merge($current_settings, $to_reset); 
+				$template =  'default';
+				$current_settings = array_merge($current_settings, $to_reset);
 				$settings = $this->merge_template_settings($current_settings, $template);
 			}
 			if(count($settings)) {
 				return update_option('CcComingSoonAdminOptions', $settings);
-			}  
+			}
 	}
-	
+
 	public function merge_template_settings($base = array(), $template) {
 
 		$file = CC_CS_PLUGIN_DIR . 'public/themes/' . $template . '/defaults.json';
@@ -486,13 +486,13 @@ class CcComingSoon {
 		} else {
 			return array();
 		}
-		
+
 	}
-	
+
 	public function cc_the_content($content = null) {
-		
+
 		remove_all_filters('the_content');
-		
+
 		 $allow_filters = array(
 			'capital_P_dangit',
 			'do_shortcode',
@@ -503,12 +503,12 @@ class CcComingSoon {
 			'shortcode_unautop',
 			'prepend_attachment',
 		);
-		
+
 		foreach($allow_filters as $filter)
-		{	
-			add_filter('the_content', $filter); 
+		{
+			add_filter('the_content', $filter);
 		}
 		return  apply_filters('the_content', $content);
 	}
-	
+
 }

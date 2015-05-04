@@ -681,7 +681,7 @@ class CcComingSoonPreview {
         $settings = array( 
             'editor_class' => 'cc-pu-customize-content',
             'media_buttons' => (isset($field['media']) && $field['media'] === true) ? true : false,
-            'quicktags' => false,
+            'quicktags' => true,
             'textarea_name' => $name,
             'tinymce' => array(
                 'toolbar1'=> ', bold,italic,underline,link,unlink,forecolor,undo,redo',

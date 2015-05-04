@@ -2,8 +2,8 @@
 Contributors: chopchoporg
 Tags: coming soon, wordpress coming soon, coming soon page, simple coming soon, coming soon template, coming soon theme, coming soon plugin, easy coming soon
 Requires at least: 3.5.1
-Tested up to: 4.1.1
-Stable tag: 2.0.0
+Tested up to: 4.2.1
+Stable tag: 2.0.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -17,21 +17,21 @@ Live preview: [Default Coming Soon Page](https://shop.chop-chop.org/demo/cc-comi
 
 Coming Soon CC allows you to create an elegant coming soon or launch page quickly and effortlessly. Make your site neat and stylish while it's under construction – work on your webpage when your visitors see an alluring landing page. Collect your visitors' emails and let them know when your website is launched.
 
-A good coming soon page is profitable for both start-ups and bigger companies to test their value hypotheses. 
+A good coming soon page is profitable for both start-ups and bigger companies to test their value hypotheses.
 
 **Features:**
 
 * [Beautiful design](https://shop.chop-chop.org/demo/cc-coming-soon-pro/?template=default)
 * Custom visual editor
-* Works with all WordPress themes   
+* Works with all WordPress themes
 * Responsive HTML5/CSS3 layout
 * Quick and easy setup
 * Custom look and feel without coding
-* Highly customizable   
+* Highly customizable
 * Google Fonts integration
-* Social media support (Facebook, Twitter, Vimeo, YouTube, Instagram)   
-* Google Analytics integration   
-* Email notifications  
+* Social media support (Facebook, Twitter, Vimeo, YouTube, Instagram)
+* Google Analytics integration
+* Email notifications
 * SEO and Meta options
 
 ...and more.
@@ -112,7 +112,11 @@ Contact shop@chop-chop.org if you have any questions or wish to provide feedback
 9. Admin panel
 10. Visual editor
 
-== Changelog == 
+== Changelog ==
+
+= 2.0.1 =
+Fix: Visual/Text editor input methods
+Fix: PHP warning
 
 = 2.0.0 =
 New: Visual editor integration
@@ -149,9 +153,9 @@ Responsive logo image
 = 0.1.2 =
 WP 4.0 compatibility
 
-= 0.1.1 = 
-Preserve canonical URL 
+= 0.1.1 =
+Preserve canonical URL
 Minor fixes
 
-= 0.1.0 = 
+= 0.1.0 =
 First release
