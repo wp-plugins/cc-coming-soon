@@ -104,7 +104,7 @@ $options = $this->get_options();
         <?php endif; ?>
 		
 		<?php if($font = $this->get_option('content_fonts', 'content_font')): ?>
-       		.main { font-family: <?php echo str_replace("+", " ", $font); ?>;}
+       		body, .main { font-family: <?php echo str_replace("+", " ", $font); ?>;}
  		<?php endif; ?>
 		
 		<?php if($font = $this->get_option('content_fonts', 'input_font')): ?>
@@ -124,12 +124,24 @@ $options = $this->get_options();
  		<?php endif; ?>
 		
 		<?php if($button_color = $this->get_option('font', 'button_color')): ?>
-       		#newsletter button, #thank-you { background-color:<?php echo $button_color; ?>;} 
-			#thank-you:after { border-top-color: <?php echo $button_color; ?>;} 
-			@media only screen and (min-width: 768px) {
-				#thank-you:after { border-bottom-color: <?php echo $button_color; ?>;} 
-			}
+       		#newsletter button { background-color:<?php echo $button_color; ?>;} 
  		<?php endif; ?>
+
+        <?php if($button_text_color = $this->get_option('font', 'button_text_color')): ?>
+            #newsletter button { color:<?php echo $button_text_color; ?>;}
+        <?php endif; ?>
+
+        <?php if($message_background_color = $this->get_option('font', 'message_background_color')): ?>
+            #thank-you { background-color:<?php echo $message_background_color; ?>;} 
+            #thank-you .triangle { border-top-color: <?php echo $message_background_color; ?>;} 
+            @media only screen and (min-width: 768px) {
+                #thank-you .triangle { border-bottom-color: <?php echo $message_background_color; ?>;} 
+            }
+        <?php endif; ?>
+
+        <?php if($message_text_color = $this->get_option('font', 'message_text_color')): ?>
+            #thank-you { color:<?php echo $message_text_color; ?>;}
+        <?php endif; ?>
 		
 		<?php if($icons_color = $this->get_option('font', 'icons_color')): ?>
        		.social-links li a i  { color:<?php echo $icons_color; ?>;}
@@ -138,6 +150,10 @@ $options = $this->get_options();
 		<?php if($icons_background_color = $this->get_option('font', 'icons_background_color')): ?>
        		.social-links li a  { background-color:<?php echo $icons_background_color; ?>;}
  		<?php endif; ?>
+
+        <?php if(defined('CC_CS_CUSTOMIZE')): ?>
+            #thank-you { display: block; }
+        <?php endif; ?>
         </style>
 
         <!--[if lt IE 9]>
@@ -173,7 +189,7 @@ $options = $this->get_options();
                 <?php if($this->get_option('newsletter', 'enabled') === 'yes'): ?>
 
                     <div class="form-container">
-                        <div id="thank-you"><p><?php if($thank_u_message = $this->get_option('subscribe_strings', 'thank_u_message')): echo $thank_u_message; else: _e('<strong>Thank you!</strong> We will notify you as soon as we launch.', $this->plugin_slug); endif; ?></p></div>
+                        <div id="thank-you"><p><?php if($thank_u_message = $this->get_option('subscribe_strings', 'thank_u_message')): echo $thank_u_message; else: _e('<strong>Thank you!</strong> We will notify you as soon as we launch.', $this->plugin_slug); endif; ?></p><span class="triangle"></span></div>
                         <form action="" id="newsletter" class="clearfix" method="POST">
                             <p class="icon-email-envelope">
                                 <input type="email" name="email" id="email" placeholder="<?php if($subscribe_field = $this->get_option('subscribe_strings', 'subscribe_field')): echo $subscribe_field; else: _e('Be the first to know', $this->plugin_slug); endif; ?>" required>

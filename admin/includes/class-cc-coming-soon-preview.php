@@ -190,7 +190,7 @@ class CcComingSoonPreview {
         );
 
         $fields['design'] = array( 
-            'name'  => 'Design',
+            'name'  => 'Fonts and Colors',
             'field_groups' => array(
                 array(
                     'option_group' => 'text_logo',
@@ -213,15 +213,15 @@ class CcComingSoonPreview {
                     ),
                 ),
                 array(
-                    'option_group' => 'font',
-                    'title'        => 'Colors',
-                    'fields' => array(
+                    'option_group' => 'content_fonts',
+                    'title'        => 'Header',
+                    'fields'       => array(
                         array(
-                            'type'   => 'color_picker',
-                            'name'   => 'text_color', 
-                            'target' => 'body',
-                            'attr'   => 'color', 
-                            'desc'   => 'Text Color:',
+                            'type'   => 'font', 
+                            'name'   => 'header_font',  
+                            'target' => 'h1:not(.title), h2, h3, h4, h5, h6',
+                            'attr'   => 'font-family', 
+                            'desc'   => 'Header Font:',
                         ),
                         array(
                             'type'   => 'color_picker',
@@ -229,7 +229,35 @@ class CcComingSoonPreview {
                             'target' => 'main h1',
                             'attr'   => 'color', 
                             'desc'   => 'Header Color:',
+                            'option_group' => 'font',
                         ),
+                    ),
+                ),
+                array(
+                    'option_group' => 'content_fonts',
+                    'title'        => 'Content',
+                    'fields'       => array(
+                        array(
+                            'type'   => 'font', 
+                            'name'   => 'content_font',  
+                            'target' => 'body, .main',
+                            'attr'   => 'font-family', 
+                            'desc'   => 'Content Font:',
+                        ),
+                        array(
+                            'type'   => 'color_picker',
+                            'name'   => 'text_color', 
+                            'target' => 'body',
+                            'attr'   => 'color', 
+                            'desc'   => 'Text Color:',
+                            'option_group' => 'font',
+                        ),
+                    ),
+                ),
+                array(
+                    'option_group' => 'font',
+                    'title'        => 'Link',
+                    'fields'       => array(
                         array(
                             'type'   => 'color_picker',
                             'name'   => 'link_color', 
@@ -237,13 +265,54 @@ class CcComingSoonPreview {
                             'attr'   => 'color', 
                             'desc'   => 'Link Color:',
                         ),
+                    ),
+                ),
+                array(
+                    'option_group' => 'content_fonts',
+                    'title'        => 'Input',
+                    'fields'       => array(
+                        array(
+                            'type'   => 'font', 
+                            'name'   => 'input_font',  
+                            'target' => '#newsletter input',
+                            'attr'   => 'font-family', 
+                            'desc'   => 'Input Font:',
+                        ),
+                    ),
+                ),
+                array(
+                    'option_group' => 'content_fonts',
+                    'title'        => 'Button',
+                    'fields'       => array(
+                        array(
+                            'type'   => 'font', 
+                            'name'   => 'button_font',  
+                            'target' => '#newsletter button',
+                            'attr'   => 'font-family', 
+                            'desc'   => 'Button Font:',
+                        ),
                         array(
                             'type'   => 'color_picker',
                             'name'   => 'button_color', 
-                            'target' => '#newsletter button, #thank-you',
+                            'target' => '#newsletter button',
                             'attr'   => 'background-color', 
                             'desc'   => 'Button Color:',
+                            'option_group' => 'font',
                         ),
+                        array(
+                            'type'   => 'color_picker',
+                            'name'   => 'button_text_color', 
+                            'target' => '#newsletter button',
+                            'attr'   => 'color', 
+                            'desc'   => 'Button Text Color:',
+                            'option_group' => 'font',
+                        ),
+                    ),
+                ),
+                array(
+                    'option_group' => 'font',
+                    'title'        => 'Social Icons',
+                    'fields' => array(
                         array(
                             'type'   => 'color_picker',
                             'name'   => 'icons_color', 
@@ -262,42 +331,30 @@ class CcComingSoonPreview {
                 ),
                 array(
                     'option_group' => 'content_fonts',
-                    'title'        => 'Fonts',
+                    'title'        => 'Thank You Message',
                     'fields' => array(
-                        array(
-                            'type'   => 'font', 
-                            'name'   => 'header_font',  
-                            'target' => 'h1:not(.title), h2, h3, h4, h5, h6',
-                            'attr'   => 'font-family', 
-                            'desc'   => 'Header Font:',
-                        ),
-                        array(
-                            'type'   => 'font', 
-                            'name'   => 'content_font',  
-                            'target' => 'body, .main',
-                            'attr'   => 'font-family', 
-                            'desc'   => 'Content Font:',
-                        ),
-                        array(
-                            'type'   => 'font', 
-                            'name'   => 'input_font',  
-                            'target' => '#newsletter input',
-                            'attr'   => 'font-family', 
-                            'desc'   => 'Input Font:',
-                        ),
-                        array(
-                            'type'   => 'font', 
-                            'name'   => 'button_font',  
-                            'target' => '#newsletter button',
-                            'attr'   => 'font-family', 
-                            'desc'   => 'Button Font:',
-                        ),
                         array(
                             'type'   => 'font', 
                             'name'   => 'message_font',  
                             'target' => '#thank-you',
                             'attr'   => 'font-family', 
                             'desc'   => 'Message Font:',
+                        ),
+                        array(
+                            'type'   => 'color_picker',
+                            'name'   => 'message_text_color', 
+                            'target' => '#thank-you',
+                            'attr'   => 'color', 
+                            'desc'   => 'Text Color:',
+                            'option_group' => 'font',
+                        ),
+                        array(
+                            'type'   => 'color_picker',
+                            'name'   => 'message_background_color', 
+                            'target' => '#thank-you',
+                            'attr'   => 'background-color', 
+                            'desc'   => 'Background Color:',
+                            'option_group' => 'font',
                         ),
                     ),
                 ),
@@ -752,7 +809,8 @@ class CcComingSoonPreview {
         
         if(isset($atts['name']) && !empty($atts['name']))
         {
-            $name = "{$this->options_prefix}[{$options_group}][{$atts['name']}]";
+            $group = isset($atts['option_group']) ? $atts['option_group'] : $options_group;
+            $name = "{$this->options_prefix}[{$group}][{$atts['name']}]";
         }
         else
         {
@@ -869,8 +927,9 @@ class CcComingSoonPreview {
      *
      * @return    $option_html - html
      */
-    function build_field_values($atts, $options_group){ 
-        $option = $this->plugin->get_option($options_group, $atts['name']);  
+    function build_field_values($atts, $options_group){
+        $group = isset($atts['option_group']) ? $atts['option_group'] : $options_group;
+        $option = $this->plugin->get_option($group, $atts['name']);  
         
         switch($atts['type']):
             case 'select':
