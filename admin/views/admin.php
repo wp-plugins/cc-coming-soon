@@ -415,6 +415,24 @@ class CcComingSoonAdminOptions extends AdminPageFramework {
                 'order'         =>  40
             ),
             array(
+                'field_id'      =>  'button_text_color',
+                'title'         =>  __('Button Text Color', $this->plugin_slug),
+                'type'          =>  'color',
+                'order'         =>  45
+            ),
+            array(
+                'field_id'      =>  'message_text_color',
+                'title'         =>  __('Text Color', $this->plugin_slug),
+                'type'          =>  'color',
+                'order'         =>  47
+            ),
+            array(
+                'field_id'      =>  'message_background_color',
+                'title'         =>  __('Background Color', $this->plugin_slug),
+                'type'          =>  'color',
+                'order'         =>  49
+            ),
+            array(
                 'field_id'      =>  'icons_color',
                 'title'         =>  __('Icons Color', $this->plugin_slug),
                 'type'          =>  'color',

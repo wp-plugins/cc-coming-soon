@@ -1,12 +1,12 @@
 <?php
 return array (
-  'status' => 
+  'status' =>
   array (
     'enabled' => 'yes',
   ),
-  'social_services' => 
+  'social_services' =>
   array (
-    'urls' => 
+    'urls' =>
     array (
       0 => 'https://www.facebook.com',
       1 => 'https://twitter.com',
@@ -17,7 +17,7 @@ return array (
       6 => 'https://www.pinterest.com/'
     ),
   ),
-  'google_analytics' => 
+  'google_analytics' =>
   array (
     'tracking_code' => '<script type="text/javascript">
 var _gaq = _gaq || [];
@@ -30,25 +30,25 @@ var s = document.getElementsByTagName(\'script\')[0]; s.parentNode.insertBefore(
 })();
 </script>',
   ),
-  'newsletter' => 
+  'newsletter' =>
   array (
     'enabled' => 'yes',
     'email' => '',
   ),
-  'mailchimp' => 
+  'mailchimp' =>
   array (
     'enabled' => '',
   ),
-  'content' => 
+  'content' =>
   array (
-    'logo_type' => '#fieldrow-content_logo_text',
+    'logo_type' => 'text',
     'logo_image' => '',
     'logo_text' => 'Company Name',
     'header_text' => 'Here goes your catchy header',
     'message_text' => 'Tell the users that your website is not active yet. Put the reason to subscribe for the notification in this paragraph. Tell them about their problems which you would like to solve. <a href="#">Don’t forget the final call to action.</a>',
     'footer_note' => '© All Rights Reserved',
   ),
-  'background' => 
+  'background' =>
   array (
     'color' => '#ffffff',
     'type' => 'undefined',
@@ -57,24 +57,24 @@ var s = document.getElementsByTagName(\'script\')[0]; s.parentNode.insertBefore(
     'repeat' => 'repeat',
     'attachment' => 'scroll',
   ),
-  'text_logo' => 
+  'text_logo' =>
   array (
     'color' => '#000000',
     'font' => 'Pacifico',
   ),
-  'font' => 
+  'font' =>
   array (
     'text_color' => '#989898',
     'header_color' => '#000000',
     'link_color' => '#484848',
   ),
-  'subscribe_strings' => 
+  'subscribe_strings' =>
   array (
     'subscribe_field' => 'Be the first to know',
     'subscribe_button' => 'Submit',
     'thank_u_message' => 'Thank you! We will notify you as soon as we launch.',
   ),
-  'content_fonts' => 
+  'content_fonts' =>
   array (
     'header_font' => 'Pacifico',
     'content_font' => 'Pacifico',

@@ -276,16 +276,21 @@ button {
     display: none;
 }
 
-#thank-you:after {
-    content: ' ';
+#thank-you .triangle {
     width: 0;
     height: 0;
     position: absolute;
     left: 50%;
     bottom: -6px;
     margin-left: -12px;
-    border-left: 12px solid transparent;
-    border-right: 12px solid transparent;
+
+    border-left-width: 12px;
+    border-left-style: solid;
+    border-left-color: transparent !important;
+    border-right-width: 12px;
+    border-right-style: solid;
+    border-right-color: transparent !important;
+
     border-top: 8px solid black;
 }
 
@@ -393,7 +398,7 @@ button {
         margin: 0;
     }
 
-    #thank-you:after {
+    #thank-you .triangle {
         top: -6px;
         margin-left: -12px;
         border-left: 12px solid transparent;
