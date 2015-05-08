@@ -3,7 +3,7 @@ Contributors: chopchoporg
 Tags: coming soon, wordpress coming soon, coming soon page, simple coming soon, coming soon template, coming soon theme, coming soon plugin, easy coming soon
 Requires at least: 3.5.1
 Tested up to: 4.2.1
-Stable tag: 2.1
+Stable tag: 2.1.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -113,6 +113,9 @@ Contact shop@chop-chop.org if you have any questions or wish to provide feedback
 10. Visual editor
 
 == Changelog ==
+
+= 2.1.1 =
+Fix: Form placeholder live preview
 
 = 2.1 =
 New: Thank you message fonts and colors customization
