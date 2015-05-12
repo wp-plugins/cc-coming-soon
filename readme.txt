@@ -29,10 +29,9 @@ A good coming soon page is profitable for both start-ups and bigger companies to
 * Custom look and feel without coding
 * Highly customizable
 * Google Fonts integration
-* Social media support (Facebook, Twitter, Vimeo, YouTube, Instagram)
+* Social media support (Facebook, Twitter, Vimeo, YouTube, Instagram, Pinterest, LinkedIn)
 * Google Analytics integration
 * Email notifications
-* SEO and Meta options
 
 ...and more.
 
