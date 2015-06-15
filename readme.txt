@@ -3,7 +3,7 @@ Contributors: chopchoporg
 Tags: coming soon, wordpress coming soon, coming soon page, simple coming soon, coming soon template, coming soon theme, coming soon plugin, easy coming soon
 Requires at least: 3.5.1
 Tested up to: 4.2.1
-Stable tag: 2.1.1
+Stable tag: 2.1.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -29,9 +29,10 @@ A good coming soon page is profitable for both start-ups and bigger companies to
 * Custom look and feel without coding
 * Highly customizable
 * Google Fonts integration
-* Social media support (Facebook, Twitter, Vimeo, YouTube, Instagram, Pinterest, LinkedIn)
+* Social media support (Facebook, Twitter, Vimeo, YouTube, Instagram)
 * Google Analytics integration
 * Email notifications
+* SEO and Meta options
 
 ...and more.
 
@@ -112,6 +113,9 @@ Contact shop@chop-chop.org if you have any questions or wish to provide feedback
 10. Visual editor
 
 == Changelog ==
+
+= 2.1.2 =
+Fix: Missing customize button when Visual Composer is installed
 
 = 2.1.1 =
 Fix: Form placeholder live preview

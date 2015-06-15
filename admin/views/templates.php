@@ -46,7 +46,7 @@
 					</div>
 					<h3 class="theme-name" id="default-name"><span>Active:</span> Default</h3>
 					<div class="theme-actions">
-						<a  href="#" class="chch-put-template-edit button button-primary hide" data-template="default" data-nounce="<?php echo wp_create_nonce('cc-pu-preview-default'); ?>">Customize</a>
+						<a  href="#" class="chch-put-template-edit button button-primary" data-template="default" data-nounce="<?php echo wp_create_nonce('cc-pu-preview-default'); ?>">Customize</a>
 					</div>
 					<?php 
 						$preview = new CcComingSoonPreview('default', 'Default'); 
